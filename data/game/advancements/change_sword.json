@@ -1,0 +1,103 @@
+{
+  "criteria": {
+    "sword0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "swordLevel": 0
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "nbt": "{swordLevel:0}"
+          }
+        ]
+      }
+    },
+    "sword1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "swordLevel": 1
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "nbt": "{swordLevel:1}"
+          }
+        ]
+      }
+    },
+    "sword2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "swordLevel": 2
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "nbt": "{swordLevel:2}"
+          }
+        ]
+      }
+    },
+    "sword3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "swordLevel": 3
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "nbt": "{swordLevel:3}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sword0",
+      "sword1",
+      "sword2",
+      "sword3"
+    ]
+  ],
+  "rewards": {
+    "function": "game:events/change_sword"
+  }
+}

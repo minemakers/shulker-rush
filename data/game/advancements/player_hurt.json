@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:events/player_hurt"
+  }
+}

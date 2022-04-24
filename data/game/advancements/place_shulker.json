@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "tag": "game:shulkers"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:events/place_shulker"
+  }
+}

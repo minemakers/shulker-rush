@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:ender_eye"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:events/leave_team"
+  }
+}

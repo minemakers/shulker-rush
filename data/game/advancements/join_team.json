@@ -1,0 +1,51 @@
+{
+  "criteria": {
+    "red": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"red\"]}"
+        }
+      }
+    },
+    "blue": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"blue\"]}"
+        }
+      }
+    },
+    "green": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"green\"]}"
+        }
+      }
+    },
+    "yellow": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"yellow\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "red",
+      "blue",
+      "green",
+      "yellow"
+    ]
+  ],
+  "rewards": {
+    "function": "game:events/join_team"
+  }
+}

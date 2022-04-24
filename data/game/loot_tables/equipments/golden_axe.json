@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,CanDestroy:[\"#game:useable\"],HideFlags:14,drop:1b}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:efficiency": 1
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{drop:0b}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$bound.golden_axe"
+                    },
+                    "score": "config"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "bound",
+                    "storage": "game:lang",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$bound.golden_axe"
+                    },
+                    "score": "config"
+                  },
+                  "range": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

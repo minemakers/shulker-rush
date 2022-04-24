@@ -1,0 +1,8 @@
+execute if predicate game:equiped/elytra run scoreboard players set #error var 2
+
+scoreboard players operation #cost.iron var = $cost.elytra.iron config
+scoreboard players operation #cost.gold var = $cost.elytra.gold config
+scoreboard players operation #cost.crystal var = $cost.elytra.crystal config
+
+execute if score #error var matches 0 run function game:managers/shops/purchase/validate
+execute if score #error var matches 0 run loot replace entity @s armor.chest loot game:equipments/elytra

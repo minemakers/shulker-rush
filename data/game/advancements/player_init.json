@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "game:events/player_joined"
+  }
+}
