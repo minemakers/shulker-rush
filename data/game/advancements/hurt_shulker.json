@@ -1,0 +1,51 @@
+{
+  "criteria": {
+    "red": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:shulker",
+          "team": "red"
+        }
+      }
+    },
+    "blue": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:shulker",
+          "team": "blue"
+        }
+      }
+    },
+    "green": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:shulker",
+          "team": "green"
+        }
+      }
+    },
+    "yellow": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:shulker",
+          "team": "yellow"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "red",
+      "blue",
+      "green",
+      "yellow"
+    ]
+  ],
+  "rewards": {
+    "function": "game:events/hurt_shulker"
+  }
+}

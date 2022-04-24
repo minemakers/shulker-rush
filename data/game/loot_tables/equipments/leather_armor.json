@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,HideFlags:71,drop:0b}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:binding_curse": 1
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "minecraft:generic.armor",
+                  "amount": 5,
+                  "operation": "addition",
+                  "slot": "feet"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{color:11546150,Name:'{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"red\"}'}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "team": "red"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{color:1481884,Name:'{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"dark_aqua\"}'}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "team": "blue"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{color:8439583,Name:'{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"green\"}'}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "team": "green"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{color:16701501,Name:'{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"yellow\"}'}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "team": "yellow"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

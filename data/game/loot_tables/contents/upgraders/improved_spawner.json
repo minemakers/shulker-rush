@@ -1,0 +1,369 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:brewing_stand",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{upgradeId:{b0:1b,b2:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "improved_spawner.name",
+                  "storage": "game:lang",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": " I"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 0
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "improved_spawner.name",
+                  "storage": "game:lang",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": " II"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "improved_spawner.name",
+                  "storage": "game:lang",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": " III"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 2
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "improved_spawner.name",
+                  "storage": "game:lang",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " III"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 3
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.improved_spawner.1",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 0
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.improved_spawner.2",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.improved_spawner.3",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 2
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "maxed",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": 3
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "nbt": "improved_spawner.help",
+                    "storage": "game:lang",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "+ ",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "#timer.iron",
+                      "objective": "var"
+                    }
+                  },
+                  {
+                    "text": "% "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "game:lang"
+                  }
+                ],
+                [
+                  {
+                    "text": "+ ",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "#timer.gold",
+                      "objective": "var"
+                    }
+                  },
+                  {
+                    "text": "% "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "game:lang"
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "▶ ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "upgrader.help",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnerLevel": {
+                      "max": 2
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

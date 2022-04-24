@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:8,drop:1b}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "crystal",
+                  "storage": "game:lang",
+                  "color": "light_purple",
+									"bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

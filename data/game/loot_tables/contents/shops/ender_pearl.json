@@ -1,0 +1,196 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:items/ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shopId:{b0:1b,b1:1b,b2:1b,b3:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "item.minecraft.ender_pearl",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.ender_pearl.iron",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.ender_pearl.iron"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.ender_pearl.gold",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.ender_pearl.gold"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "light_purple",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.ender_pearl.crystal",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "crystal",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.ender_pearl.crystal"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "▶ ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "shop.help",
+                    "storage": "game:lang"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

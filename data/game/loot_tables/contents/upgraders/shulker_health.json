@@ -1,0 +1,106 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{upgradeId:{b0:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "shulker_health.name",
+                  "storage": "game:lang",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.shulker_health",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "game:lang"
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "nbt": "shulker_health.help[0]",
+                    "storage": "game:lang",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "nbt": "shulker_health.help[1]",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "▶ ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "upgrader.help",
+                    "storage": "game:lang"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

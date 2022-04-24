@@ -1,0 +1,26 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:sharpness": {
+        "type": "minecraft:score",
+        "target": "this",
+        "score": "swordLevel"
+      }
+    }
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "game:tmp"
+    },
+    "ops": [
+      {
+        "source": "swordLevel",
+        "target": "swordLevel",
+        "op": "replace"
+      }
+    ]
+  }
+]

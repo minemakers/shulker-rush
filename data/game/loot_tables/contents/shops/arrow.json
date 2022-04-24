@@ -1,0 +1,196 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:items/arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shopId:{b1:1b,b2:1b,b3:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "item.minecraft.arrow",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.arrow.iron",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.arrow.iron"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.arrow.gold",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.arrow.gold"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "light_purple",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.arrow.crystal",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "crystal",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.arrow.crystal"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "▶ ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "shop.help",
+                    "storage": "game:lang"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

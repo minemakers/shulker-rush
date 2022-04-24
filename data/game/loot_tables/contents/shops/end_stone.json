@@ -1,0 +1,196 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:blocks/end_stone",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shopId:{b0:1b,b2:1b,b4:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "block.minecraft.end_stone",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "game:lang",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.end_stone.iron",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.end_stone.iron"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.end_stone.gold",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.end_stone.gold"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "light_purple",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.end_stone.crystal",
+                      "objective": "config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "crystal",
+                    "storage": "game:lang"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$cost.end_stone.crystal"
+                    },
+                    "score": "config"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "▶ ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "shop.help",
+                    "storage": "game:lang"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

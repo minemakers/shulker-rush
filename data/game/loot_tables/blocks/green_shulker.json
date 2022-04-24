@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_shulker_box",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanPlaceOn:[\"#game:all\"],CanDestroy:[\"#game:useable\"],HideFlags:24,drop:1b}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "green_shulker",
+                  "storage": "game:lang",
+                  "color": "green",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

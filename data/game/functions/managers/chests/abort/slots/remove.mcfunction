@@ -1,0 +1,1 @@
+data remove storage game:tmp chests.target[0]

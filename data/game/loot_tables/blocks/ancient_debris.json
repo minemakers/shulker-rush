@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ancient_debris",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanPlaceOn:[\"#game:all\"],CanDestroy:[\"#game:useable\"],HideFlags:24,drop:1b}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$count.ancient_debris"
+                },
+                "score": "config"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

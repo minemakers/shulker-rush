@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:40,CustomPotionColor:10362141,CustomPotionEffects:[{Id:1b,Duration:0,ShowParticles:0b,ShowIcon:0b}],drop:1b}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "explosive_bottle.name",
+                  "storage": "game:lang",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "explosive_bottle.help",
+                    "storage": "game:lang",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

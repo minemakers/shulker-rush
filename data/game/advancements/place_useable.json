@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "tag": "game:useable"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:events/place_useable"
+  }
+}
