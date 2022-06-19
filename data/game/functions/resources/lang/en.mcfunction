@@ -35,6 +35,7 @@ data modify storage game:lang click_here set value "Right click here"
 data modify storage game:lang click_open set value "Click to open"
 data modify storage game:lang game_launcher set value "Start the game"
 data modify storage game:lang arena_picker set value "Change arena"
+data modify storage game:lang lang_picker set value "Change language"
 
 data modify storage game:lang team_picker.red set value "Red Team"
 data modify storage game:lang team_picker.blue set value "Blue Team"
