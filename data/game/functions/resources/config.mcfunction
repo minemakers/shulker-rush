@@ -55,7 +55,6 @@ scoreboard players set $count.ancient_debris config 3
 scoreboard players set $count.arrow config 10
 scoreboard players set $count.end_stone config 4
 scoreboard players set $count.ender_pearl config 1
-scoreboard players set $count.firework_rocket config 1
 scoreboard players set $count.oak_planks config 12
 scoreboard players set $count.scaffolding config 6
 scoreboard players set $count.stained_glass config 16

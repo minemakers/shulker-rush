@@ -10,18 +10,19 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:8,drop:1b}"
+              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:10,drop:1b}"
             },
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$count.firework_rocket"
-                },
-                "score": "config"
-              }
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.luck",
+                  "name": "unstackable",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "head"
+                }
+              ]
             }
           ]
         }
