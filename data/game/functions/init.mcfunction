@@ -64,6 +64,7 @@ gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops true
 gamerule doTraderSpawning false
+gamerule doWardenSpawning false
 gamerule doWeatherCycle false
 gamerule keepInventory true
 gamerule logAdminCommands false
