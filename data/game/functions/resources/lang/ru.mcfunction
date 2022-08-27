@@ -17,8 +17,8 @@ data modify storage game:lang rules.objective append value [{text: "и може�
 
 data modify storage game:lang rules.spawners append value [{text: "На вашем острове, "}, {ref: 0}, {text: " и "}, {ref: 1}]
 data modify storage game:lang rules.spawners append value [{text: "будет появляться регулярно. On some islands,"}]
-data modify storage game:lang rules.spawners append value [{text: "Генераторы"}, {ref: 2}, {"могут быть найдены на центральных островах."}]
-data modify storage game:lang rules.spawners append value [{text: "Эти 3 предмета дают возможность"}]
+data modify storage game:lang rules.spawners append value [{text: "Генераторы "}, {"Кристаллов могут быть найдены на центральных островах."}]
+data modify storage game:lang rules.spawners append value [{text: "Эти 3 ресурса дают возможность"}]
 data modify storage game:lang rules.spawners append value [{strong: "покупать предметы"}, {text: " в магазине."}]
 
 data modify storage game:lang rules.upgrades append value [{text: "Убийство игроков будут временно"}]
