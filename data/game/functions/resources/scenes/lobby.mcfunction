@@ -2,8 +2,9 @@ tp @e[type=!player] 0 -1000 0
 kill @e[type=!player]
 
 fill 5009 219 -6 4991 213 7 minecraft:barrier hollow
+setblock 5000 215 7 air
 
-summon minecraft:villager 5000.5 214 7.2 {Tags:["game_launcher"],ActiveEffects:[{Id:14,Duration:2147483647,ShowParticles:false}],NoAI:1b,Silent:1b,Invulnerable:1b}
+summon minecraft:villager 5000.5 214 7.4 {Tags:["game_launcher"],ActiveEffects:[{Id:14,Duration:2147483647,ShowParticles:false}],NoAI:1b,Silent:1b,Invulnerable:1b}
 summon minecraft:armor_stand 5000.5 215.75 7.05 {Tags:["game_launcher"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 215.5 7.05 {Tags:["game_launcher_help"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
