@@ -1,0 +1,1 @@
+function #game:events/next_lang

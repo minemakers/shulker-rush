@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/place_useable"
+    "function": "game:events/proxy/place_useable"
   }
 }

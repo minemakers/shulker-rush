@@ -9,5 +9,5 @@ execute if entity @s[advancements={game:killed_by_player={bit6=true}}] run score
 advancement revoke @s only game:killed_by_player
 
 tag @s add victim
-execute as @a if score @s playerId = #source var run function game:events/killed_player
+execute as @a if score @s playerId = #source var run function #game:events/killed_player
 tag @s remove victim

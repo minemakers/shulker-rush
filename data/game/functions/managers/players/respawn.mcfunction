@@ -1,7 +1,7 @@
 scoreboard players reset @s respawnTimer
 
 gamemode adventure @s
-function game:managers/players/spawn
+function #game:managers/players/spawn
 effect give @s minecraft:strength 3 0 true
 effect give @s minecraft:resistance 4 2 true
 

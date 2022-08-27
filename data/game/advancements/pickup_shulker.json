@@ -18,6 +18,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/pickup_shulker"
+    "function": "game:events/proxy/pickup_shulker"
   }
 }

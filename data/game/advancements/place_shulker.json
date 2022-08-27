@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/place_shulker"
+    "function": "game:events/proxy/place_shulker"
   }
 }

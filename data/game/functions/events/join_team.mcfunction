@@ -4,10 +4,10 @@ execute if entity @s[advancements={game:join_team={green=true}}] run team join g
 execute if entity @s[advancements={game:join_team={yellow=true}}] run team join yellow @s
 advancement revoke @s only game:join_team
 
-function game:events/countdown
+function #game:events/countdown
 
 gamemode spectator @s[team=players]
-execute if entity @s[team=players] run function game:managers/players/spawn
+execute if entity @s[team=players] run function #game:managers/players/spawn
 
 execute if entity @s[team=red] at @e[type=minecraft:villager,tag=red] positioned ^ ^ ^-4 run tp @s ~ ~ ~ ~ ~7
 execute if entity @s[team=blue] at @e[type=minecraft:villager,tag=blue] positioned ^ ^ ^-4 run tp @s ~ ~ ~ ~ ~7

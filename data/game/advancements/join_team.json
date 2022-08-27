@@ -46,6 +46,6 @@
     ]
   ],
   "rewards": {
-    "function": "game:events/join_team"
+    "function": "game:events/proxy/join_team"
   }
 }

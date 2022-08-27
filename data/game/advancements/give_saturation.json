@@ -18,6 +18,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/give_saturation"
+    "function": "game:events/proxy/give_saturation"
   }
 }

@@ -18,6 +18,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/player_respawn"
+    "function": "game:events/proxy/player_respawn"
   }
 }

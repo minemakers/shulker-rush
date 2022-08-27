@@ -13,8 +13,8 @@ scoreboard players reset * deathCount
 scoreboard players reset * armorLevel
 scoreboard players reset * swordLevel
 
-function game:resources/scenes/lobby
-execute as @a run function game:managers/players/spawn
+function #game:resources/scenes/lobby
+execute as @a run function #game:managers/players/spawn
 
 fill 996 238 42 991 237 51 water replace air
 fill 992 238 52 996 237 53 water replace air

@@ -3,5 +3,5 @@ execute if score @s armorLevel matches 2 run scoreboard players operation #cost.
 execute if score @s armorLevel matches 1 run scoreboard players operation #cost.souls var = $cost.reinforced_armor.2 config
 execute if score @s armorLevel matches 0 run scoreboard players operation #cost.souls var = $cost.reinforced_armor.1 config
 
-execute if score #error var matches 0 run function game:managers/upgraders/purchase/validate
-execute if score #error var matches 0 run function game:managers/upgraders/actions/upgrade_armor
+execute if score #error var matches 0 run function #game:managers/upgraders/purchase/validate
+execute if score #error var matches 0 run function #game:managers/upgraders/actions/upgrade_armor

@@ -46,6 +46,6 @@
     ]
   ],
   "rewards": {
-    "function": "game:events/hurt_shulker"
+    "function": "game:events/proxy/hurt_shulker"
   }
 }

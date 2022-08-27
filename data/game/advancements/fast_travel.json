@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/fast_travel"
+    "function": "game:events/proxy/fast_travel"
   }
 }
