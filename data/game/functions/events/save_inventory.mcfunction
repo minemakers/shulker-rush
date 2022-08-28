@@ -1,4 +1,4 @@
-advancement revoke @s only game:change_inventory
+advancement revoke @s only game:change_inventory inv
 
 data modify storage game:tmp players[].selected set value 1b
 execute unless entity @s[tag=bit0] run data modify storage game:tmp players[{bit0:1b}].selected set value 1b
