@@ -8,7 +8,7 @@ execute if score $arena var matches 2 at @e[type=minecraft:armor_stand,tag=arena
 execute if score $arena var matches 3 at @e[type=minecraft:armor_stand,tag=arena3] run summon minecraft:armor_stand ~ ~-.45 ~.35 {Tags:["picker_arrow"],Invulnerable:1,Invisible:1,NoBasePlate:1,Rotation:[180f,0f],DisabledSlots:2096896,NoGravity:1,Marker:1,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1791012615,-59816339,-1370244978,-1061184572],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU5YWU3YTRiZTY1ZmNiYWVlNjUxODEzODlhMmY3ZDQ3ZTJlMzI2ZGI1OWVhM2ViNzg5YTkyYzg1ZWE0NiJ9fX0="}]}}}}]}
 
 # Restart the selected arena name sequence
-schedule function #game:resources/views/sequences/arena_picker1 1t
+schedule function game:resources/views/sequences/arena_picker1 1t
 data modify entity @e[type=minecraft:armor_stand,tag=arena1,limit=1] CustomName set value '{"text":"Grassy Islands","bold":"true","color":"green"}'
 data modify entity @e[type=minecraft:armor_stand,tag=arena2,limit=1] CustomName set value '{"text":"Cloudy Gates","bold":"true","color":"aqua"}'
 data modify entity @e[type=minecraft:armor_stand,tag=arena3,limit=1] CustomName set value '{"text":"Mechanical Sky","bold":"true","color":"dark_purple"}'

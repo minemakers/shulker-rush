@@ -18,4 +18,4 @@ data modify entity @e[type=minecraft:area_effect_cloud,tag=upgrader_usage,sort=n
 
 summon minecraft:armor_stand ~ ~.15 ~.18 {ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b}],Pose:{Head:[-90f,0f,0f]},Marker:1b,NoGravity:1b,NoBasePlate:1b,Invisible:1b,Small:1b}
 
-function #game:resources/views/gui/upgrader
+function game:resources/views/gui/upgrader

@@ -8,7 +8,7 @@ summon minecraft:villager 5000.5 214 7.4 {Tags:["game_launcher"],ActiveEffects:[
 summon minecraft:armor_stand 5000.5 215.75 7.05 {Tags:["game_launcher"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 215.5 7.05 {Tags:["game_launcher_help"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
-setblock 5000 214 6 minecraft:dark_oak_wall_sign[facing=north]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function #game:events/next_arena"}}'}
+setblock 5000 214 6 minecraft:dark_oak_wall_sign[facing=north]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function game:events/next_arena"}}'}
 summon minecraft:armor_stand 5000.5 213.6 7.05 {Tags:["arena_head"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b}],Rotation:[180f,0f],Marker:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:1b,NoGravity:1b}
 summon minecraft:armor_stand 5000 217.9 11 {Tags:["arena1"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5006 217.9 10 {Tags:["arena2"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
@@ -32,8 +32,8 @@ summon minecraft:villager 5000.5 213 -4.8 {Tags:["lang_picker"],ActiveEffects:[{
 summon minecraft:armor_stand 5000.5 213.75 -5.0 {Tags:["lang_picker"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 213.5 -5.0 {Tags:["lang_picker_help"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
-function #game:resources/views/arena_picker
-function #game:resources/views/lobby_options
+function game:resources/views/arena_picker
+function game:resources/views/lobby_options
 
 summon minecraft:armor_stand 5001 213 18 {HandItems:[{id:"minecraft:birch_fence",Count:1b},{}],NoGravity:1b,Invulnerable:1b,ShowArms:1b,DisabledSlots:2097151,Rotation:[115.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:5592405}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:43433}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:15578914}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"Keel"}}],NoBasePlate:1b,Tags:["keel"],CustomName:'"Becoming an another guy"',CustomNameVisible:1,Pose:{Head:[40.0f,0.0f,0.0f],RightArm:[-30.0f,0.0f,20.0f],LeftLeg:[10.0f,0.0f,-10.0f],RightLeg:[-5.0f,0.0f,5.0f]}}
 summon minecraft:armor_stand 4997 213 18 {NoGravity:1b,Invulnerable:1b,ShowArms:1b,DisabledSlots:2097151,Rotation:[-95.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:3421236}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6964247}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:7313103}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"Aksiome"}}],NoBasePlate:1b,Tags:["aksiome"],Pose:{LeftLeg:[30.0f,40.0f,-10.0f],RightLeg:[0.0f,0.0f,0.0f],Head:[0.0f,0.0f,0.0f],LeftArm:[-80.0f,40.0f,-10f],RightArm:[-70.0f,-20.0f,-10.0f],Body:[0.0f,0.0f,0.0f]},CustomName:'"Game design & commands"',CustomNameVisible:1,HandItems:[{id:"minecraft:bow",Count:1b},{}]}
@@ -46,7 +46,7 @@ execute at @e[tag=aksiome] run summon minecraft:armor_stand ~ ~2.25 ~ {CustomNam
 execute at @e[tag=shurik204] run summon minecraft:armor_stand ~ ~2.25 ~ {CustomName:'{"text":"Shurik204","bold":true,"color":"white"}',CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 execute at @e[tag=greenlenux] run summon minecraft:armor_stand ~ ~2.255 ~ {CustomName:'{"text":"GreenLenux","bold":true,"color":"white"}',CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
-function #game:resources/views/rules/format
+function game:resources/views/rules/format
 summon minecraft:armor_stand 5000 217 -11 {CustomName:'[{"text":"Shulker Rush II","color":"light_purple","bold":true}]',CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000 216.7 -11 {CustomName:'[{"text":"by MineMakers Team","color":"white"}]',CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
