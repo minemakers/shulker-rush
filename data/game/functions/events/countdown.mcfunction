@@ -10,6 +10,6 @@ execute if entity @a[team=yellow,gamemode=!spectator] run scoreboard players add
 execute if score #count var matches ..1 run scoreboard players reset $countdown var
 execute if entity @a[team=players,gamemode=!spectator] run scoreboard players reset $countdown var
 
-execute if score $countdown var matches 0 run function #game:events/start_game
-execute if score $countdown var matches 0.. run function #game:resources/views/screen/countdown
-execute if score $countdown var matches 1.. run schedule function #game:events/countdown 1s
+execute if score $countdown var matches 0 run function game:events/start_game
+execute if score $countdown var matches 0.. run function game:resources/views/screen/countdown
+execute if score $countdown var matches 1.. run schedule function game:events/countdown 1s

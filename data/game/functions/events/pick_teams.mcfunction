@@ -1,7 +1,7 @@
 scoreboard players set $status var 1
 
-function #game:resources/scenes/teams
-execute as @a run function #game:managers/players/spawn
+function game:resources/scenes/teams
+execute as @a run function game:managers/players/spawn
 
 title @a title [{"text":"Shulker Rush II","color":"light_purple"}]
 title @a subtitle [{"storage":"game:lang","nbt":"pick_teams","color":"gray"}]

@@ -1,6 +1,6 @@
 summon minecraft:villager ~ ~ ~ {VillagerData:{type:"minecraft:snow",profession:"minecraft:toolsmith",level:99},Invulnerable:1b,NoAI:1b,Silent:1b,CanPickUpLoot:0b,PersistenceRequired:1b}
 
-execute unless data storage game:tmp trades run function #game:managers/merchants/setup
+execute unless data storage game:tmp trades run function game:managers/merchants/setup
 execute as @e[type=minecraft:villager] run data modify entity @s Offers.Recipes set from storage game:tmp trades
 
 data modify block 0 1 0 Text1 set value '[{"storage":"game:lang","nbt":"merchant","color":"dark_purple"}]'

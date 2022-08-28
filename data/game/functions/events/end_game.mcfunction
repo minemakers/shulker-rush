@@ -20,4 +20,4 @@ execute as @a[scores={deathCount=0..}] run tellraw @s [{"text":"▶ ","color":"g
 
 playsound minecraft:entity.wither.death master @s 5000 216 0 1000000
 
-function #game:events/stop_game
+function game:events/stop_game

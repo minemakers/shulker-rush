@@ -10,4 +10,4 @@ execute if entity @s[team=blue] run tellraw @a[team=blue] [{"text":"+1 ","color"
 execute if entity @s[team=green] run tellraw @a[team=green] [{"text":"+1 ","color":"aqua"},{"storage":"game:lang","nbt":"soul"}]
 execute if entity @s[team=yellow] run tellraw @a[team=yellow] [{"text":"+1 ","color":"aqua"},{"storage":"game:lang","nbt":"soul"}]
 
-schedule function #game:resources/views/screen/actionbar 1t
+schedule function game:resources/views/screen/actionbar 1t

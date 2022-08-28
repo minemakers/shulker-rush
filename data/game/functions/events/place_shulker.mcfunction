@@ -22,5 +22,5 @@ execute store result entity @e[type=minecraft:marker,tag=shulker_block,limit=1] 
 execute store result entity @e[type=minecraft:marker,tag=shulker_block,limit=1] Pos[1] double 1 run scoreboard players get #pos.y var
 execute store result entity @e[type=minecraft:marker,tag=shulker_block,limit=1] Pos[2] double 1 run scoreboard players get #pos.z var
 
-execute at @e[type=minecraft:marker,tag=shulker_block,limit=1] positioned ~.5 ~9 ~.5 run function #game:managers/shulkers/place
+execute at @e[type=minecraft:marker,tag=shulker_block,limit=1] positioned ~.5 ~9 ~.5 run function game:managers/shulkers/place
 kill @e[type=minecraft:marker,tag=shulker_block]
