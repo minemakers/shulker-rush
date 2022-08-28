@@ -12,7 +12,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "gamemode": "adventure"
               }
             }
@@ -22,6 +23,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/below_arena"
+    "function": "game:events/proxy/below_arena"
   }
 }

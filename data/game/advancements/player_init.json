@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/player_joined"
+    "function": "game:events/proxy/player_joined"
   }
 }

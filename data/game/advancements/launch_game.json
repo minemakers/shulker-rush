@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/launch_game"
+    "function": "game:events/proxy/launch_game"
   }
 }

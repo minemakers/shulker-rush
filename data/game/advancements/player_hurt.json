@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/player_hurt"
+    "function": "game:events/proxy/player_hurt"
   }
 }

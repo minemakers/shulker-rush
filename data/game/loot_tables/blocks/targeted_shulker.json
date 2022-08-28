@@ -12,7 +12,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "looking_at": {
                     "type": "minecraft:shulker",
                     "team": "red"
@@ -30,7 +31,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "looking_at": {
                     "type": "minecraft:shulker",
                     "team": "blue"
@@ -48,7 +50,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "looking_at": {
                     "type": "minecraft:shulker",
                     "team": "green"
@@ -66,7 +69,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "looking_at": {
                     "type": "minecraft:shulker",
                     "team": "yellow"

@@ -1,0 +1,1 @@
+function #game:events/place_useable

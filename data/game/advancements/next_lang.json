@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "game:events/next_lang"
+    "function": "game:events/proxy/next_lang"
   }
 }

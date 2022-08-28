@@ -106,3 +106,5 @@ data modify storage game:lang shulker_health set value {name: "Cabinet of Souls"
 
 data modify storage game:lang shop set value {name: "Item shop", help: "Click here to buy", usage: "Right click to use"}
 data modify storage game:lang upgrader set value {name: "Upgrades", help: "Click here to buy", usage: "Right click to use"}
+# No translator
+data remove storage game:lang translator
