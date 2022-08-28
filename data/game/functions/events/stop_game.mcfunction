@@ -21,6 +21,8 @@ fill 1020 238 52 1016 238 53 water replace air
 
 execute as @e[type=marker,tag=useable_blocks] at @s if entity @s[y=309,dy=50] run tp @s ~ 307 ~
 execute at @e[type=marker,tag=useable_blocks] run fill ~12 ~12 ~12 ~-12 ~-12 ~-12 air replace #game:useable
+# Don't leave pistons, just in case
+execute at @e[type=minecraft:marker,tag=shop] run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:moving_piston
 
 function game:resources/scenes/lobby
 execute as @a run function game:managers/players/spawn

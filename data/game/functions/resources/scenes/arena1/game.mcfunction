@@ -19,3 +19,7 @@ execute positioned 959.5 243 27.5 run function game:resources/prefabs/spawners/v
 
 summon minecraft:area_effect_cloud 1059.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","blue"],Rotation:[0f,10f]}
 summon minecraft:area_effect_cloud 953.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","yellow"],Rotation:[0f,10f]}
+
+# Spawn protection
+fill 1059 244 17 1059 247 20 minecraft:moving_piston replace minecraft:air
+fill 953 244 17 953 247 20 minecraft:moving_piston replace minecraft:air

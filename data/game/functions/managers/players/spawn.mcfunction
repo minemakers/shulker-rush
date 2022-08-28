@@ -15,7 +15,7 @@ execute if score $status var matches 2 if score $arena var matches 1 run spawnpo
 execute if score $status var matches 2 if score $arena var matches 2 run spawnpoint @s[team=players] 2071 239 -1
 execute if score $status var matches 2 if score $arena var matches 3 run spawnpoint @s[team=players] 3017 254 -14
 
-execute if score $status var matches 2 at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red,limit=1] run tp @s[team=red] ~ ~ ~ ~ ~
-execute if score $status var matches 2 at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue,limit=1] run tp @s[team=blue] ~ ~ ~ ~ ~
-execute if score $status var matches 2 at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green,limit=1] run tp @s[team=green] ~ ~ ~ ~ ~
-execute if score $status var matches 2 at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=yellow,limit=1] run tp @s[team=yellow] ~ ~ ~ ~ ~
+execute if score $status var matches 2 if entity @s[team=red] at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red,limit=1] run tp @s ~ ~ ~ ~ ~
+execute if score $status var matches 2 if entity @s[team=blue] at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue,limit=1] run tp @s ~ ~ ~ ~ ~
+execute if score $status var matches 2 if entity @s[team=green] at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green,limit=1] run tp @s ~ ~ ~ ~ ~
+execute if score $status var matches 2 if entity @s[team=yellow] at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=yellow,limit=1] run tp @s ~ ~ ~ ~ ~

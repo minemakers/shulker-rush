@@ -3,6 +3,9 @@ execute if block ~ ~ ~ #game:shop[facing=east] run tp @s ~ ~ ~ 90 0
 execute if block ~ ~ ~ #game:shop[facing=north] run tp @s ~ ~ ~ 0 0
 execute if block ~ ~ ~ #game:shop[facing=south] run tp @s ~ ~ ~ 180 0
 
+# Protect shop from being obsructed
+execute rotated as @s run fill ^1 ^ ^1 ^-1 ^ ^1 minecraft:moving_piston replace minecraft:air
+
 data modify block 0 1 0 Text1 set value '{"nbt":"shop.name","storage":"game:lang"}'
 data modify block ~ ~ ~ CustomName set from block 0 1 0 Text1
 
