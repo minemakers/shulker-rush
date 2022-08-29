@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "hit": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:slime",
+                    "nbt": "{Tags:[\"c_hitbox\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "game:managers/spawners/crystal/handle_hit"
+    }
+}
