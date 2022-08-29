@@ -9,9 +9,18 @@ data modify storage game:lang respawning.2 set value ["Respawn in ", " seconds..
 
 data modify storage game:lang pick_teams set value "Pick a team to start the game"
 
+data modify storage game:lang contribution.keel set value "Becoming an another guy"
+data modify storage game:lang contribution.aksiome set value "Game design & commands"
+data modify storage game:lang contribution.bulix set value "Building"
+data modify storage game:lang contribution.shurik204 set value "Helping & testing"
+data modify storage game:lang contribution.greenlenux set value "Trailer Maker"
+
 data modify storage game:lang arena.grassy_islands set value "Grassy Islands"
 data modify storage game:lang arena.cloudy_gates set value "Cloudy Gates"
 data modify storage game:lang arena.mechanical_sky set value "Mechanical Sky"
+data modify storage game:lang arena.teams.2 set value "2 teams"
+data modify storage game:lang arena.teams.3 set value "3 teams"
+data modify storage game:lang arena.teams.4 set value "4 teams"
 
 data modify storage game:lang rules.objective append value [{text: "The objective consists of"}]
 data modify storage game:lang rules.objective append value [{strong: "killing the opposing team's Shulker"}, {text: "."}]

@@ -24,5 +24,11 @@ data modify entity @e[type=minecraft:armor_stand,tag=arena3,limit=1] CustomName 
 execute if score $arena var matches 3 run data modify block 0 10 0 Text2 set value '[{"storage":"game:tmp","nbt":"style","interpret":true},"→ ",{"block":"0 10 0","nbt":"Text1","interpret":true}," ←"]'
 execute if score $arena var matches 3 run data modify block 0 10 0 Text3 set value '[{"storage":"game:tmp","nbt":"style","interpret":true}," →",{"block":"0 10 0","nbt":"Text1","interpret":true},"← "]'
 
+# Text "# teams"
+data modify block 0 1 0 Text4 set value '{"storage":"game:lang","nbt":"arena.teams.2"}'
+execute as @e[type=minecraft:armor_stand,tag=lang.2_teams] run data modify entity @s CustomName set from block 0 1 0 Text4
+data modify block 0 1 0 Text4 set value '{"storage":"game:lang","nbt":"arena.teams.4"}'
+execute as @e[type=minecraft:armor_stand,tag=lang.4_teams] run data modify entity @s CustomName set from block 0 1 0 Text4
+
 # Restart the selected arena name sequence
 schedule function game:resources/views/sequences/arena_picker/1 1t

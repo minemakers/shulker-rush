@@ -9,9 +9,18 @@ data modify storage game:lang respawning.2 set value ["Возрождение ",
 
 data modify storage game:lang pick_teams set value "Выберите команду для начала"
 
+data modify storage game:lang contribution.keel set value "Лидер команды"
+data modify storage game:lang contribution.aksiome set value "Дизайн игры и датапак"
+data modify storage game:lang contribution.bulix set value "Строительство"
+data modify storage game:lang contribution.shurik204 set value "Помощь и тестирование"
+data modify storage game:lang contribution.greenlenux set value "Создатель трейлера"
+
 data modify storage game:lang arena.grassy_islands set value "Травяные острова"
 data modify storage game:lang arena.cloudy_gates set value "Облачные ворота"
 data modify storage game:lang arena.mechanical_sky set value "Механическое небо"
+data modify storage game:lang arena.teams.2 set value "2 команды"
+data modify storage game:lang arena.teams.3 set value "3 команды"
+data modify storage game:lang arena.teams.4 set value "4 команды"
 
 data modify storage game:lang rules.objective append value [{text: "Задача состоит в убийстве"}]
 data modify storage game:lang rules.objective append value [{strong: "Шалкера противоположной команды"}, {text: "."}]
