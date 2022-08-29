@@ -29,7 +29,7 @@ data modify storage game:lang rules.objective append value [{text: "После �
 data modify storage game:lang rules.objective append value [{strong: "команда больше не сможет возрождаться"}]
 data modify storage game:lang rules.objective append value [{text: "и может быть побеждена."}]
 
-data modify storage game:lang rules.spawners append value [{ref: 0}, {text: " и "}, {ref: 1}, {text: " появляються"}]
+data modify storage game:lang rules.spawners append value [{ref: 0}, {text: " и "}, {ref: 1}, {text: " появляются"}]
 data modify storage game:lang rules.spawners append value [{text: "на острове каждой команды."}]
 data modify storage game:lang rules.spawners append value [{text: "Генераторы "}, {ref: 2}, {"text":" можно найти на центральных островах."}]
 data modify storage game:lang rules.spawners append value [{text: "Эти 3 предмета дают возможность"}]
