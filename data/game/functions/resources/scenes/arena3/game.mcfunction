@@ -36,3 +36,15 @@ execute if entity @a[team=red,limit=1] run summon minecraft:area_effect_cloud 29
 execute if entity @a[team=blue,limit=1] run summon minecraft:area_effect_cloud 2986 236 -83 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","blue"],Rotation:[0f,10f]}
 execute if entity @a[team=green,limit=1] run summon minecraft:area_effect_cloud 3084.5 236 3.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","green"],Rotation:[90f,10f]}
 execute if entity @a[team=yellow,limit=1] run summon minecraft:area_effect_cloud 2998.5 236 101.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","yellow"],Rotation:[180f,10f]}
+
+# Spawn protection
+fill 2985 234 -84 2987 235 -79 minecraft:moving_piston replace minecraft:air
+fill 2899 234 16 2904 235 14 minecraft:moving_piston replace minecraft:air
+fill 2999 234 102 2997 235 97 minecraft:moving_piston replace minecraft:air
+fill 3085 234 2 3080 235 4 minecraft:moving_piston replace minecraft:air
+
+# Fire
+setblock 2986 239 -83 minecraft:fire
+setblock 2900 239 15 minecraft:fire
+setblock 2998 239 101 minecraft:fire
+setblock 3084 239 3 minecraft:fire

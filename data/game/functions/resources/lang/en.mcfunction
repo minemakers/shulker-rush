@@ -9,6 +9,20 @@ data modify storage game:lang respawning.2 set value ["Respawn in ", " seconds..
 
 data modify storage game:lang pick_teams set value "Pick a team to start the game"
 
+data modify storage game:lang contributor.keel set value "Becoming an another guy"
+data modify storage game:lang contributor.aksiome set value "Game design & commands"
+data modify storage game:lang contributor.bulix set value "Building"
+data modify storage game:lang contributor.shurik204 set value "Helping & testing"
+data modify storage game:lang contributor.greenlenux set value "Trailer Maker"
+
+data modify storage game:lang arena.grassy_islands set value "Grassy Islands"
+data modify storage game:lang arena.cloudy_gates set value "Cloudy Gates"
+data modify storage game:lang arena.mechanical_sky set value "Mechanical Sky"
+data modify storage game:lang arena.teams.2 set value "2 teams"
+data modify storage game:lang arena.teams.3 set value "3 teams"
+data modify storage game:lang arena.teams.4 set value "4 teams"
+
+data remove storage game:lang rules
 data modify storage game:lang rules.objective append value [{text: "The objective consists of"}]
 data modify storage game:lang rules.objective append value [{strong: "killing the opposing team's Shulker"}, {text: "."}]
 data modify storage game:lang rules.objective append value [{text: "Once it has been destroyed, the enemies"}]
@@ -65,6 +79,7 @@ data modify storage game:lang errors.launch set value "Sorry, there are not enou
 data modify storage game:lang errors.shulker_block set value "An error occured while placing the shulker!"
 data modify storage game:lang errors.shulker_island set value "You cannot place a shulker outside of its island!"
 
+data remove storage game:lang suicide
 data modify storage game:lang suicide append value ["", " burned up during atmospheric reentry"]
 data modify storage game:lang suicide append value ["", " committed suicide"]
 data modify storage game:lang suicide append value ["", " died"]
@@ -106,5 +121,5 @@ data modify storage game:lang shulker_health set value {name: "Cabinet of Souls"
 
 data modify storage game:lang shop set value {name: "Item shop", help: "Click here to buy", usage: "Right click to use"}
 data modify storage game:lang upgrader set value {name: "Upgrades", help: "Click here to buy", usage: "Right click to use"}
-# No translator
+
 data remove storage game:lang translator

@@ -9,6 +9,20 @@ data modify storage game:lang respawning.2 set value ["Возрождение ",
 
 data modify storage game:lang pick_teams set value "Выберите команду для начала"
 
+data modify storage game:lang contributor.keel set value "Лидер команды"
+data modify storage game:lang contributor.aksiome set value "Дизайн игры и датапак"
+data modify storage game:lang contributor.bulix set value "Строительство"
+data modify storage game:lang contributor.shurik204 set value "Помощь и тестирование"
+data modify storage game:lang contributor.greenlenux set value "Создатель трейлера"
+
+data modify storage game:lang arena.grassy_islands set value "Травяные острова"
+data modify storage game:lang arena.cloudy_gates set value "Облачные ворота"
+data modify storage game:lang arena.mechanical_sky set value "Механическое небо"
+data modify storage game:lang arena.teams.2 set value "2 команды"
+data modify storage game:lang arena.teams.3 set value "3 команды"
+data modify storage game:lang arena.teams.4 set value "4 команды"
+
+data remove storage game:lang rules
 data modify storage game:lang rules.objective append value [{text: "Задача состоит в убийстве"}]
 data modify storage game:lang rules.objective append value [{strong: "Шалкера противоположной команды"}, {text: "."}]
 data modify storage game:lang rules.objective append value [{text: "После его уничтожения противоположная"}]
@@ -65,6 +79,7 @@ data modify storage game:lang errors.launch set value "Извините, нед�
 data modify storage game:lang errors.shulker_block set value "Ошибка установки Шалкера!"
 data modify storage game:lang errors.shulker_island set value "Вы не можете установить шалкер вне своего острова!"
 
+data remove storage game:lang suicide
 data modify storage game:lang suicide append value ["", " сгорел при вхождении в атмосферу"]
 data modify storage game:lang suicide append value ["", " самоубился"]
 data modify storage game:lang suicide append value ["", " умер"]

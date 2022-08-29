@@ -1,1 +1,1 @@
-data remove storage game:tmp chests.target[0]
+data remove storage game:core chests.target[0]

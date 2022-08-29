@@ -1,5 +1,5 @@
+#define storage game:core Main
 #define storage game:lang Language
-#define storage game:tmp Temp Storage
 
 team add red
 team add blue
@@ -76,3 +76,9 @@ gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
+
+setblock 0 10 0 minecraft:oak_sign
+setblock 0 1 0 minecraft:oak_sign
+setblock 0 0 0 minecraft:white_shulker_box
+setblock 0 -1 0 minecraft:command_block[facing=down]{auto:0b}
+setblock 0 -2 0 minecraft:chain_command_block[facing=down]{auto:1b,Command:"data modify block ~ ~1 ~ auto set value 0"}

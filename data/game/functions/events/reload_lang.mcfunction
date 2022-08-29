@@ -1,11 +1,11 @@
-data remove storage game:tmp trades
-data remove storage game:tmp messages
-data remove storage game:lang rules
-data remove storage game:lang suicide
+data remove storage game:core trades
+data remove storage game:core messages
+function game:resources/lang/en
 
-execute if score $lang var matches 0 run function game:resources/lang/en
-execute if score $lang var matches 1 run function game:resources/lang/fr
-execute if score $lang var matches 2 run function game:resources/lang/ru
+data modify block 0 -1 0 Command set from storage game:core i18n[0].function
+data modify block 0 -1 0 auto set value 1
 
-function game:resources/views/rules/format
-function game:resources/views/lobby_options
+schedule function game:resources/views/lobby/credits 2t replace
+schedule function game:resources/views/lobby/options 2t replace
+schedule function game:resources/views/lobby/formatters/rules 2t replace
+schedule function game:resources/views/lobby/formatters/arena 2t replace

@@ -1,4 +1,4 @@
-data remove storage game:tmp trades
+data remove storage game:core trades
 
 function game:managers/merchants/trades/crystal1
 function game:managers/merchants/trades/crystal2
