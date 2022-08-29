@@ -76,3 +76,5 @@ gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
+
+setblock 0 10 0 minecraft:oak_sign

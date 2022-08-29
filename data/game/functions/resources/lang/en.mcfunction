@@ -9,6 +9,10 @@ data modify storage game:lang respawning.2 set value ["Respawn in ", " seconds..
 
 data modify storage game:lang pick_teams set value "Pick a team to start the game"
 
+data modify storage game:lang arena.grassy_islands set value "Grassy Islands"
+data modify storage game:lang arena.cloudy_gates set value "Cloudy Gates"
+data modify storage game:lang arena.mechanical_sky set value "Mechanical Sky"
+
 data modify storage game:lang rules.objective append value [{text: "The objective consists of"}]
 data modify storage game:lang rules.objective append value [{strong: "killing the opposing team's Shulker"}, {text: "."}]
 data modify storage game:lang rules.objective append value [{text: "Once it has been destroyed, the enemies"}]

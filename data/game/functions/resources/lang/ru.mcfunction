@@ -9,6 +9,10 @@ data modify storage game:lang respawning.2 set value ["Возрождение ",
 
 data modify storage game:lang pick_teams set value "Выберите команду для начала"
 
+data modify storage game:lang arena.grassy_islands set value "Травяные острова"
+data modify storage game:lang arena.cloudy_gates set value "Облачные ворота"
+data modify storage game:lang arena.mechanical_sky set value "Механическое небо"
+
 data modify storage game:lang rules.objective append value [{text: "Задача состоит в убийстве"}]
 data modify storage game:lang rules.objective append value [{strong: "Шалкера противоположной команды"}, {text: "."}]
 data modify storage game:lang rules.objective append value [{text: "После его уничтожения противоположная"}]

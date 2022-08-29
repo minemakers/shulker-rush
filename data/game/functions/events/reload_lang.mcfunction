@@ -10,3 +10,4 @@ setblock 0 51 0 minecraft:redstone_block
 
 schedule function game:resources/views/rules/format 2t replace
 schedule function game:resources/views/lobby_options 2t replace
+schedule function game:resources/views/sequences/arena_picker/reset 2t replace
