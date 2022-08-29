@@ -15,8 +15,8 @@ scoreboard players operation @s[team=green] swordLevel = @e[type=minecraft:marke
 scoreboard players operation @s[team=yellow] swordLevel = @e[type=minecraft:marker,tag=upgrader,tag=yellow] swordLevel
 execute unless score #swordLevel var = @s swordLevel run function game:events/change_sword
 
-execute if entity @s[team=red] run data modify block 0 0 0 Items set from storage game:tmp chests.red
-execute if entity @s[team=blue] run data modify block 0 0 0 Items set from storage game:tmp chests.blue
-execute if entity @s[team=green] run data modify block 0 0 0 Items set from storage game:tmp chests.green
-execute if entity @s[team=yellow] run data modify block 0 0 0 Items set from storage game:tmp chests.yellow
+execute if entity @s[team=red] run data modify block 0 0 0 Items set from storage game:core chests.red
+execute if entity @s[team=blue] run data modify block 0 0 0 Items set from storage game:core chests.blue
+execute if entity @s[team=green] run data modify block 0 0 0 Items set from storage game:core chests.green
+execute if entity @s[team=yellow] run data modify block 0 0 0 Items set from storage game:core chests.yellow
 loot replace entity @s enderchest.0 26 mine 0 0 0 minecraft:air{contents:1b}

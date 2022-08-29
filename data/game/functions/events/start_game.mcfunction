@@ -21,7 +21,10 @@ execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue] run spaw
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green] run spawnpoint @a[team=green] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=yellow] run spawnpoint @a[team=yellow] ~ ~ ~
 
-data remove storage game:tmp players
+data merge block 0 0 0 {Items:[]}
+data remove storage game:core chests
+data remove storage game:core players
+loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:air{contents:1b}
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/respawn
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/initialize
 

@@ -1,14 +1,11 @@
-data remove storage game:tmp trades
-data remove storage game:tmp messages
-data remove storage game:lang rules
-data remove storage game:lang suicide
+data remove storage game:core trades
+data remove storage game:core messages
+function game:resources/lang/en
 
-setblock 0 50 0 minecraft:command_block
-setblock 0 52 0 minecraft:command_block{Command:"fill 0 50 0 0 52 0 minecraft:air"}
-data modify block 0 50 0 Command set from storage game:lang _current_lang.function
-setblock 0 51 0 minecraft:redstone_block
+data modify block 0 -1 0 Command set from storage game:core i18n[0].function
+data modify block 0 -1 0 auto set value 1
 
-schedule function game:resources/views/rules/format 2t replace
-schedule function game:resources/views/lobby_options 2t replace
-schedule function game:resources/views/credits/translate 2t replace
-schedule function game:resources/views/sequences/arena_picker/reset 2t replace
+schedule function game:resources/views/lobby/credits 2t replace
+schedule function game:resources/views/lobby/options 2t replace
+schedule function game:resources/views/lobby/formatters/rules 2t replace
+schedule function game:resources/views/lobby/formatters/arena 2t replace

@@ -1,4 +1,4 @@
-execute if score $status var matches 0 run schedule function game:resources/views/sequences/arena_picker/1 4t replace
+execute if score $status var matches 0 run schedule function game:resources/views/lobby/sequences/arena1 4t replace
 
 # Alternated animation for the selected arena
 execute if score $arena var matches 1 as @e[type=minecraft:armor_stand,tag=arena1] run data modify entity @s CustomName set from block 0 10 0 Text3

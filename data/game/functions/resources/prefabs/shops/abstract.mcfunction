@@ -18,4 +18,4 @@ data modify entity @e[type=minecraft:area_effect_cloud,tag=shop_name,sort=neares
 data modify block 0 1 0 Text1 set value '{"nbt":"shop.usage","storage":"game:lang","color":"gray","italic":true}'
 data modify entity @e[type=minecraft:area_effect_cloud,tag=shop_usage,sort=nearest,limit=1] CustomName set from block 0 1 0 Text1
 
-function game:resources/views/gui/shop
+function game:resources/views/game/gui/shop

@@ -1,4 +1,4 @@
-execute store result score #ref var run data get storage game:tmp messages.rules.lines[0][0].ref
+execute store result score #ref var run data get storage game:core messages.rules.lines[0][0].ref
 
 execute if score #ref var matches 0 run data modify block 0 1 0 Text3 set value '[{"storage":"game:lang","nbt":"iron","color":"white","bold":true}]'
 execute if score #ref var matches 1 run data modify block 0 1 0 Text3 set value '[{"storage":"game:lang","nbt":"gold","color":"gold","bold":true}]'
