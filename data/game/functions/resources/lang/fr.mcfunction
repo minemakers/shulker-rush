@@ -9,30 +9,44 @@ data modify storage game:lang respawning.2 set value ["Réapparition dans ", " s
 
 data modify storage game:lang pick_teams set value "Choisissez une équipe pour commencer"
 
-data modify storage game:lang rules.objective append value [{text: "Le but est de"}]
-data modify storage game:lang rules.objective append value [{strong: tuer le Shulker de l'équipe adverse"}, {text: "."}]
-data modify storage game:lang rules.objective append value [{text: "Une fois détruit, les ennemis"}]
-data modify storage game:lang rules.objective append value [{strong: "ne pourront plus apparaître"}]
-data modify storage game:lang rules.objective append value [{text: "et pourront perdre."}]
+data modify storage game:lang contributor.keel set value "Devient une autre personne"
+data modify storage game:lang contributor.aksiome set value "Conception & Commandes"
+data modify storage game:lang contributor.bulix set value "Construction"
+data modify storage game:lang contributor.shurik204 set value "Contributions multiples"
+data modify storage game:lang contributor.greenlenux set value "Vidéaste"
 
-data modify storage game:lang rules.spawners append value [{text: "Sur votre île, "}, {ref: 0}, {text: " et "}, {ref: 1}]
+data modify storage game:lang arena.grassy_islands set value "Îles Verdoyantes"
+data modify storage game:lang arena.cloudy_gates set value "Portes Nuageuses"
+data modify storage game:lang arena.mechanical_sky set value "Ciel Mécanique"
+data modify storage game:lang arena.teams.2 set value "2 équipes"
+data modify storage game:lang arena.teams.3 set value "3 équipes"
+data modify storage game:lang arena.teams.4 set value "4 équipes"
+
+data remove storage game:lang rules
+data modify storage game:lang rules.objective append value [{text: "L'objectif est de"}]
+data modify storage game:lang rules.objective append value [{strong: "tuer le Shulker de l'équipe adverse"}, {text: "."}]
+data modify storage game:lang rules.objective append value [{text: "Une fois détruit, les ennemis"}]
+data modify storage game:lang rules.objective append value [{strong: "ne pourront plus réapparaître"}]
+data modify storage game:lang rules.objective append value [{text: "et pourront être vaincus."}]
+
+data modify storage game:lang rules.spawners append value [{text: "Sur votre île, du "}, {ref: 0}, {text: " et de l'"}, {ref: 1}]
 data modify storage game:lang rules.spawners append value [{text: "apparaîtront régulièrement. Sur certaines îles,"}]
-data modify storage game:lang rules.spawners append value [{ref: 2}, {text: " générateurs peuvent être trouvés."}]
-data modify storage game:lang rules.spawners append value [{text: "Ces 3 ressources vous permettent d'"}]
-data modify storage game:lang rules.spawners append value [{strong: "acheter des objets"}, {text: " dans la boutique."}]
+data modify storage game:lang rules.spawners append value [{text: "sont situés des générateurs de "}, {ref: 2}, {text: "."}]
+data modify storage game:lang rules.spawners append value [{text: "Ces 3 ressources vous permettent"}]
+data modify storage game:lang rules.spawners append value [{strong: "d'acheter des objets"}, {text: " dans la boutique."}]
 
 data modify storage game:lang rules.upgrades append value [{text: "Tuer des joueurs mettra temporairement"}]
-data modify storage game:lang rules.upgrades append value [{strong: "en brillance le Shulker adverse"}]
-data modify storage game:lang rules.upgrades append value [{text: "et vous donnera un "}, {ref: 3}]
-data modify storage game:lang rules.upgrades append value [{text: "qui peut être utilisé pour"}]
-data modify storage game:lang rules.upgrades append value [{strong: "améliorés vos skills"}, {text: "."}]
+data modify storage game:lang rules.upgrades append value [{strong: "en surbrillance le Shulker adverse"}]
+data modify storage game:lang rules.upgrades append value [{text: "et vous donnera une "}, {ref: 3}]
+data modify storage game:lang rules.upgrades append value [{text: "qui peut être utilisée pour"}]
+data modify storage game:lang rules.upgrades append value [{strong: "améliorer vos compétences."}, {text: "."}]
 
-data modify storage game:lang rules.prompt set value {text: "Règles", action: "reveal", "hover": "Cliquer pour afficher les règles"}
-data modify storage game:lang stop.prompt set value {text: "Il semblerait que quelqu'un soit parti et que vous soyez la seule équipe en jeu. Voulez-vous terminer la partie ?", action: "yes", "hover": "Cliquer pour terminer la partie"}
+data modify storage game:lang rules.prompt set value {text: "Règles", action: "révéler", "hover": "Cliquer pour afficher les règles"}
+data modify storage game:lang stop.prompt set value {text: "Il semblerait que quelqu'un soit parti et que vous soyez la seule équipe en jeu. Voulez-vous terminer la partie ?", action: "oui", "hover": "Cliquer pour terminer la partie"}
 
-data modify storage game:lang click_me set value "Clique droit"
-data modify storage game:lang click_here set value "Clique droit"
-data modify storage game:lang click_open set value "Clique pour ouvrir"
+data modify storage game:lang click_me set value "Cliquez moi"
+data modify storage game:lang click_here set value "Cliquez ici"
+data modify storage game:lang click_open set value "Cliquez pour ouvrir"
 data modify storage game:lang game_launcher set value "Commencer la partie"
 data modify storage game:lang arena_picker set value "Changer d'arène"
 data modify storage game:lang lang_picker set value "Changer la langue"
@@ -48,8 +62,8 @@ data modify storage game:lang join_team.blue set value "Vous avez rejoint l'Équ
 data modify storage game:lang join_team.green set value "Vous avez rejoint l'Équipe Verte !"
 data modify storage game:lang join_team.yellow set value "Vous avez rejoint l'Équipe Jaune !"
 
-data modify storage game:lang stats.kill set value ["Vous avez tué ", " players"]
-data modify storage game:lang stats.death set value ["Vous êtes mort ", " times"]
+data modify storage game:lang stats.kill set value ["Vous avez tué ", " joueurs"]
+data modify storage game:lang stats.death set value ["Vous êtes mort ", " fois"]
 
 data modify storage game:lang win.red set value {title: "L'Équipe Rouge", subtitle: "remporte la partie !", message: "L'Équipe Rouge remporte la partie"}
 data modify storage game:lang win.blue set value {title: "L'Équipe Bleue", subtitle: "remporte la partie !", message: "L'Équipe Bleue remporte la partie"}
@@ -64,15 +78,15 @@ data modify storage game:lang shulker_death.yellow set value {message: "Le Shulk
 data modify storage game:lang errors.launch set value "Désolé, il n'y a pas assez de joueurs pour commencer la partie !"
 data modify storage game:lang errors.shulker_block set value "Une erreur est survenue lors du placement du shulker!"
 data modify storage game:lang errors.shulker_island set value "Vous ne pouvez pas placer le shulker hors de son île !"
-
 data modify storage game:lang errors.shop_money set value "Vous n'avez pas assez d'argent pour acheter cet objet !"
 data modify storage game:lang errors.shop_owned set value "Vous possédez déjà cet objet !"
-data modify storage game:lang errors.upgrader_souls set value "Vous n'avez pas assez d'âmes pour cette amélioration !"
+data modify storage game:lang errors.upgrader_souls set value "Vous n'avez pas assez d'âmes pour acheter cette amélioration !"
 data modify storage game:lang errors.upgrader_maxed set value "Cette amélioration est déjà au maximum !"
 data modify storage game:lang errors.upgrader_health set value "Votre shulker est déjà complètement soigné !"
 data modify storage game:lang errors.upgrader_shulker set value "Vous ne pouvez pas soigner un shulker mort !"
 data modify storage game:lang errors.upgrader_base set value "Vous ne pouvez pas acheter d'améliorations dans une base ennemie !"
 
+data remove storage game:lang suicide
 data modify storage game:lang suicide append value ["", " a cramé lors de son entré dans l'atmosphère"]
 data modify storage game:lang suicide append value ["", " s'est suicidé"]
 data modify storage game:lang suicide append value ["", " est mort"]
@@ -102,17 +116,17 @@ data modify storage game:lang yellow_shulker set value "Shulker Jaune"
 
 data modify storage game:lang leave_team set value {name: "Quitter l'équipe", usage: "Clique droit"}
 
-data modify storage game:lang fast_travel set value {name: "Déplacement Instantané", help: "Revenir instantanément à son shulker"}
-data modify storage game:lang shulker_picker set value {name: "Attrape Shulker", help: "Capturer un shulker"}
-data modify storage game:lang explosive_bottle set value {name: "Bouteille Explosive", help: "Explode any block"}
+data modify storage game:lang fast_travel set value {name: "Déplacement Instantané", help: "Retour instantané à son shulker"}
+data modify storage game:lang shulker_picker set value {name: "Attrape Shulker", help: "Capture un shulker"}
+data modify storage game:lang explosive_bottle set value {name: "Bouteille Explosive", help: "Explose n'importe quel bloc"}
 
 data modify storage game:lang enhanced_shulker set value {name: "Shulker Amélioré", help: "Près de son shulker"}
 data modify storage game:lang improved_spawner set value {name: "Générateur Amélioré", help: "Vitesse améliorée"}
-data modify storage game:lang reinforced_armor set value {name: "Armure Renforcée", help: Toutes les armures de l'équipe"}
+data modify storage game:lang reinforced_armor set value {name: "Armure Renforcée", help: "Toutes les armures de l'équipe"}
 data modify storage game:lang sharpened_sword set value {name: "Épée aiguisée", help: "Toutes les épée de l'équipe"}
 data modify storage game:lang shulker_health set value {name: "Cabinet des Âmes", help: ["Soigne votre shulker","+ ❤ Point de Vie"]}
 
-data modify storage game:lang shop set value {name: "Boutique d'Objets", help: "Cliquer pour acheter", usage: "Clique droit pour utiliser"}
-data modify storage game:lang upgrader set value {name: "Améliorations", help: "Cliquer pour acheter", usage: "Clique droit pour utiliser"}
+data modify storage game:lang shop set value {name: "Boutique d'Objets", help: "Cliquez pour acheter", usage: "Clique droit pour utiliser"}
+data modify storage game:lang upgrader set value {name: "Améliorations", help: "Cliquez pour acheter", usage: "Clique droit pour utiliser"}
 
 data modify storage game:lang translator set value "GreenLenux"
