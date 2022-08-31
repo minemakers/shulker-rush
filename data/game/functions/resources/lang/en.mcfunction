@@ -78,6 +78,13 @@ data modify storage game:lang shulker_death.yellow set value {message: "The Yell
 data modify storage game:lang errors.launch set value "Sorry, there are not enough players to start the game!"
 data modify storage game:lang errors.shulker_block set value "An error occured while placing the shulker!"
 data modify storage game:lang errors.shulker_island set value "You cannot place a shulker outside of its island!"
+data modify storage game:lang errors.shop_money set value "You don't have enough money to buy this item!"
+data modify storage game:lang errors.shop_owned set value "You already own this item!"
+data modify storage game:lang errors.upgrader_souls set value "You don't have enough souls to buy this upgrade!"
+data modify storage game:lang errors.upgrader_maxed set value "This upgrade is already maxed out!"
+data modify storage game:lang errors.upgrader_health set value "Your shulker is already at full health!"
+data modify storage game:lang errors.upgrader_shulker set value "You can't heal a dead shulker!"
+data modify storage game:lang errors.upgrader_base set value "You can't buy upgrades in an enemy base!"
 
 data remove storage game:lang suicide
 data modify storage game:lang suicide append value ["", " burned up during atmospheric reentry"]
