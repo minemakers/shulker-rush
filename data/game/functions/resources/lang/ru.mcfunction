@@ -93,7 +93,7 @@ data modify storage game:lang killed_player set value ["", " был убит и�
 data modify storage game:lang eliminated set value ["Извините, ", " вы уничтожены!"]
 
 data modify storage game:lang cost set value "Стоимость"
-data modify storage game:lang bound set value "Вечная"
+data modify storage game:lang bound set value "Не теряется при смерти"
 data modify storage game:lang maxed set value "Максимум"
 data modify storage game:lang merchant set value "Торговец ресурсами"
 
@@ -119,7 +119,7 @@ data modify storage game:lang reinforced_armor set value {name: "Укрепле�
 data modify storage game:lang sharpened_sword set value {name: "Заострённые мечи", help: "Все мечи команды"}
 data modify storage game:lang shulker_health set value {name: "Аптечка с Душами", help: ["Исцелите ваш Шалкер","+ ❤ Очко здоровья"]}
 
-data modify storage game:lang shop set value {name: "Магазин предметов", help: "Нажмите тут, чтобы использовать", usage: "ПКМ чтобы открыть"}
-data modify storage game:lang upgrader set value {name: "Улучшения", help: "Нажмите тут, чтобы использовать", usage: "ПКМ чтобы открыть"}
+data modify storage game:lang shop set value {name: "Магазин предметов", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
+data modify storage game:lang upgrader set value {name: "Улучшения", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
 
 data modify storage game:lang translator set value "VeryEvilHuman"

@@ -15,6 +15,7 @@ execute store success score #success var run clear @s #game:all{shopId:{b3:1b}} 
 execute if score #success var matches 1 run scoreboard players add #handler var 8
 execute store success score #success var run clear @s #game:all{shopId:{b4:1b}} 0
 execute if score #success var matches 1 run scoreboard players add #handler var 16
+clear @s #game:all{shopId:{}}
 
 execute if score #handler var matches 0 run scoreboard players set #error var -1
 execute if score #handler var matches 1 run function game:managers/shops/handlers/wooden_sword

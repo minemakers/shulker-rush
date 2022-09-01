@@ -62,6 +62,7 @@ scoreboard players set $count.stained_glass config 16
 scoreboard players set $bound.armors config 1
 scoreboard players set $bound.bow config 0
 scoreboard players set $bound.crossbow config 0
+scoreboard players set $bound.wooden_pickaxe config 1
 scoreboard players set $bound.diamond_pickaxe config 0
 scoreboard players set $bound.elytra config 1
 scoreboard players set $bound.fishing_rod config 0
