@@ -8,5 +8,3 @@ execute if score #shulker_type var matches 4 store success score #success var if
 # Throws an error if the shulker is out of its island
 execute if score #success var matches 0 run function game:managers/shulkers/errors/island
 execute if block ~ ~ ~ #game:shulkers run setblock ~ ~ ~ minecraft:air
-# Untag the player that placed the shulker
-tag @s remove tmp.placed_shulker
