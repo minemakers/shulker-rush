@@ -1,1 +1,0 @@
-function #game:events/place_shulker

@@ -1,4 +1,4 @@
-playsound minecraft:block.amethyst_cluster.break master @a[distance=..15] ~ ~ ~ 0.5 1
+playsound minecraft:block.amethyst_cluster.break master @a[distance=..15] ~ ~ ~ 0.7 1
 particle minecraft:block amethyst_cluster ~ ~0.2 ~ 0.25 0.2 0.25 0.1 30
 
 execute if block ~ ~ ~ minecraft:small_amethyst_bud run setblock ~ ~ ~ minecraft:air

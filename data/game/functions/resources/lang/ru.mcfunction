@@ -78,6 +78,13 @@ data modify storage game:lang shulker_death.yellow set value {message: "Жёлт
 data modify storage game:lang errors.launch set value "Извините, недостаточно игроков для начала игры!"
 data modify storage game:lang errors.shulker_block set value "Ошибка установки Шалкера!"
 data modify storage game:lang errors.shulker_island set value "Вы не можете установить шалкер вне своего острова!"
+data modify storage game:lang errors.shop_money set value "У вас недостаточно ресурсов чтобы купить этот предмет!"
+data modify storage game:lang errors.shop_owned set value "У вас уже есть этот предмет!"
+data modify storage game:lang errors.upgrader_souls set value "У вашей команды недостаточно душ чтобы купить это улучшение!"
+data modify storage game:lang errors.upgrader_maxed set value "Достигнут максимальный уровень!"
+data modify storage game:lang errors.upgrader_health set value "Ваш Шалкер уже имеет максимум здоровья!"
+data modify storage game:lang errors.upgrader_shulker set value "Вы не можете лечить мёртвый Шалкер!"
+data modify storage game:lang errors.upgrader_base set value "Вы не можете покупать улучшения на вражеской базе!"
 
 data remove storage game:lang suicide
 data modify storage game:lang suicide append value ["", " сгорел при вхождении в атмосферу"]
@@ -92,8 +99,12 @@ data modify storage game:lang suicide append value ["", " попробовал �
 data modify storage game:lang killed_player set value ["", " был убит игроком ", ""]
 data modify storage game:lang eliminated set value ["Извините, ", " вы уничтожены!"]
 
+data modify storage game:lang actionbar.souls set value "Души:"
+data modify storage game:lang actionbar.kills set value "Убийств:"
+data modify storage game:lang actionbar.deaths set value "Смертей:"
+
 data modify storage game:lang cost set value "Стоимость"
-data modify storage game:lang bound set value "Вечная"
+data modify storage game:lang bound set value "Не теряется при смерти"
 data modify storage game:lang maxed set value "Максимум"
 data modify storage game:lang merchant set value "Торговец ресурсами"
 
@@ -119,7 +130,7 @@ data modify storage game:lang reinforced_armor set value {name: "Укрепле�
 data modify storage game:lang sharpened_sword set value {name: "Заострённые мечи", help: "Все мечи команды"}
 data modify storage game:lang shulker_health set value {name: "Аптечка с Душами", help: ["Исцелите ваш Шалкер","+ ❤ Очко здоровья"]}
 
-data modify storage game:lang shop set value {name: "Магазин предметов", help: "Нажмите тут, чтобы использовать", usage: "ПКМ чтобы открыть"}
-data modify storage game:lang upgrader set value {name: "Улучшения", help: "Нажмите тут, чтобы использовать", usage: "ПКМ чтобы открыть"}
+data modify storage game:lang shop set value {name: "Магазин предметов", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
+data modify storage game:lang upgrader set value {name: "Улучшения", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
 
-data modify storage game:lang translator set value "VeryEvilHuman"
+data modify storage game:lang translator set value "VeryEvilHuman & Shurik204"

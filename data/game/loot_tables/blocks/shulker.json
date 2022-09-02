@@ -1,0 +1,82 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:blocks/red_shulker",
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#shulker_type"
+                },
+                "score": "var"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:blocks/blue_shulker",
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#shulker_type"
+                },
+                "score": "var"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:blocks/green_shulker",
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#shulker_type"
+                },
+                "score": "var"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "game:blocks/yellow_shulker",
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#shulker_type"
+                },
+                "score": "var"
+              },
+              "range": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

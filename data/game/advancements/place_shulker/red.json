@@ -1,0 +1,19 @@
+{
+  "criteria": {
+      "_": {
+          "trigger": "minecraft:placed_block",
+          "conditions": {
+              "location": {
+                  "block": {
+                      "blocks": [
+                          "minecraft:red_shulker_box"
+                      ]
+                  }
+              }
+          }
+      }
+  },
+  "rewards": {
+      "function": "game:events/proxy/place_shulker/red"
+  }
+}
