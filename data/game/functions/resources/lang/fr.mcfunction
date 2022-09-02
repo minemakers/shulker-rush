@@ -99,6 +99,10 @@ data modify storage game:lang suicide append value ["", " a essayé de nager dan
 data modify storage game:lang killed_player set value ["", " s'est fait tué par ", ""]
 data modify storage game:lang eliminated set value ["Désolé, ", " vous êtes éliminé !"]
 
+data modify storage game:lang actionbar.souls set value "Âmes:"
+data modify storage game:lang actionbar.kills set value "Éliminations:"
+data modify storage game:lang actionbar.deaths set value "Morts:"
+
 data modify storage game:lang cost set value "Coût"
 data modify storage game:lang bound set value "Permanent"
 data modify storage game:lang maxed set value "Au max"
