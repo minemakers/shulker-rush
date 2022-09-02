@@ -133,4 +133,4 @@ data modify storage game:lang shulker_health set value {name: "Аптечка с
 data modify storage game:lang shop set value {name: "Магазин предметов", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
 data modify storage game:lang upgrader set value {name: "Улучшения", help: "Нажмите, чтобы купить", usage: "ПКМ чтобы открыть"}
 
-data modify storage game:lang translator set value "VeryEvilHuman"
+data modify storage game:lang translator set value "VeryEvilHuman & Shurik204"
