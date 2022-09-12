@@ -27,6 +27,7 @@ team modify players collisionRule never
 
 scoreboard objectives add var dummy
 scoreboard objectives add const dummy
+scoreboard objectives add weight dummy
 scoreboard objectives add config dummy
 
 scoreboard objectives add souls dummy
@@ -48,6 +49,7 @@ scoreboard objectives add deathCount deathCount
 scoreboard objectives add pickup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add connect minecraft.custom:minecraft.leave_game
 
+scoreboard players set #-1 const -1
 scoreboard players set #20 const 20
 scoreboard players set #100 const 100
 
