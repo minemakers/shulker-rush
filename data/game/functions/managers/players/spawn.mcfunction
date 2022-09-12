@@ -1,3 +1,5 @@
+scoreboard players reset @s respawnTimer
+
 execute if score $status var matches 0 run tp @s 5000 216 0 0 10
 execute if score $status var matches 0 run spawnpoint @s 5000 216 0
 
