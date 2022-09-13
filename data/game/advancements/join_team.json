@@ -35,6 +35,15 @@
           "nbt": "{Tags:[\"yellow\"]}"
         }
       }
+    },
+    "random": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"random\"]}"
+        }
+      }
     }
   },
   "requirements": [
@@ -42,7 +51,8 @@
       "red",
       "blue",
       "green",
-      "yellow"
+      "yellow",
+      "random"
     ]
   ],
   "rewards": {

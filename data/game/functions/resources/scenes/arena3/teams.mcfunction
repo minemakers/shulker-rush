@@ -9,7 +9,7 @@ execute positioned 2992 294 4 rotated 0 0 run function game:resources/prefabs/pi
 execute positioned 2997 294 9 rotated 90 0 run function game:resources/prefabs/pickers/variants/green
 execute positioned 2992 294 14 rotated 180 0 run function game:resources/prefabs/pickers/variants/yellow
 
-execute positioned 2996.2 294 13.2 run function game:resources/prefabs/pickers/spectator
+execute positioned 2996 294 13 rotated 135 0 run function game:resources/prefabs/pickers/variants/random
 execute positioned 2988.8 294 13.2 run function game:resources/prefabs/pickers/spectator
-execute positioned 2988.8 294 5.8 run function game:resources/prefabs/pickers/spectator
+execute positioned 2988 294 5 rotated -45 0 run function game:resources/prefabs/pickers/variants/random
 execute positioned 2996.2 294 5.8 run function game:resources/prefabs/pickers/spectator

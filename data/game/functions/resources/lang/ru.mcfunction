@@ -55,6 +55,7 @@ data modify storage game:lang team_picker.red set value "Красная кома
 data modify storage game:lang team_picker.blue set value "Синяя команда"
 data modify storage game:lang team_picker.green set value "Зелёная команда"
 data modify storage game:lang team_picker.yellow set value "Жёлтая команда"
+data modify storage game:lang team_picker.random set value "Случайная команда"
 data modify storage game:lang team_picker.spectator set value "Наблюдать"
 
 data modify storage game:lang join_team.red set value "Вы вошли в красную команду!"
