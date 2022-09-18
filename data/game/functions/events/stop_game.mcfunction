@@ -12,6 +12,7 @@ scoreboard players reset * killCount
 scoreboard players reset * deathCount
 scoreboard players reset * armorLevel
 scoreboard players reset * swordLevel
+scoreboard players reset * respawnTimer
 
 # Clear the area before teleporting players to the lobby
 execute as @e[type=marker,tag=useable_blocks] at @s if entity @s[y=309,dy=50] run tp @s ~ 307 ~
