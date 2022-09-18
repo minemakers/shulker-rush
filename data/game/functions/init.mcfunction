@@ -48,6 +48,7 @@ scoreboard objectives add deathCount deathCount
 scoreboard objectives add pickup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add connect minecraft.custom:minecraft.leave_game
 
+scoreboard players set #-1 const -1
 scoreboard players set #20 const 20
 scoreboard players set #100 const 100
 

@@ -1,0 +1,1 @@
+function game:managers/players/join_random

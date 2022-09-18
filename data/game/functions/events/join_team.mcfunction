@@ -1,5 +1,3 @@
-execute if entity @s[advancements={game:join_team={random=true}}] run function game:managers/players/join_random
-
 execute if entity @s[advancements={game:join_team={red=true}}] run team join red @s
 execute if entity @s[advancements={game:join_team={blue=true}}] run team join blue @s
 execute if entity @s[advancements={game:join_team={green=true}}] run team join green @s
