@@ -1,5 +1,3 @@
-advancement revoke @s only game:next_lang
-
 data modify storage game:core i18n append from storage game:core i18n[0]
 data remove storage game:core i18n[0]
 

@@ -1,6 +1,4 @@
 scoreboard players reset @s confirm
-advancement revoke @s only game:stop_game
-
 scoreboard players set $status var 0
 
 clear @a

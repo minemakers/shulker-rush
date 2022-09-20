@@ -1,5 +1,3 @@
-advancement revoke @s only game:leave_team
-
 clear @s
 team join players @s
 gamemode adventure @s

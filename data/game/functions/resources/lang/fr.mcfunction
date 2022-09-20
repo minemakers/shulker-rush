@@ -55,7 +55,7 @@ data modify storage game:lang team_picker.red set value "Équipe Rouge"
 data modify storage game:lang team_picker.blue set value "Équipe Bleue"
 data modify storage game:lang team_picker.green set value "Équipe Verte"
 data modify storage game:lang team_picker.yellow set value "Équipe Jaune"
-data modify storage game:lang team_picker.random set value "[TRANSLATE] Random Team"
+data modify storage game:lang team_picker.random set value "Équipe Aléatoire"
 data modify storage game:lang team_picker.spectator set value "Spectateur"
 
 data modify storage game:lang join_team.red set value "Vous avez rejoint l'Équipe Rouge !"
