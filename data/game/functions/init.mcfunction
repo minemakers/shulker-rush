@@ -27,7 +27,6 @@ team modify players collisionRule never
 
 scoreboard objectives add var dummy
 scoreboard objectives add const dummy
-scoreboard objectives add weight dummy
 scoreboard objectives add config dummy
 
 scoreboard objectives add souls dummy

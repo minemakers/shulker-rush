@@ -1,5 +1,3 @@
-advancement revoke @s only game:player_respawn
-
 scoreboard players operation #respawn var = @s respawnTimer
 scoreboard players operation #respawn var %= #20 const
 

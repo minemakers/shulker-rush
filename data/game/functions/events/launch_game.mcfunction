@@ -1,5 +1,3 @@
-advancement revoke @s only game:launch_game
-
 execute store result score #count var if entity @a[gamemode=!spectator]
 
 execute if score #count var matches ..1 run tellraw @a {"storage":"game:lang","nbt":"errors.launch","color":"red"}

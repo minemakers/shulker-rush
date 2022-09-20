@@ -1,5 +1,3 @@
-advancement revoke @s only game:change_sword
-
 execute store result storage game:core swordLevel int 1 run scoreboard players get @s swordLevel
 execute if entity @s[nbt={Inventory:[{Slot:0b,tag:{sword:1b}}]}] run item modify entity @s container.0 game:sword
 execute if entity @s[nbt={Inventory:[{Slot:1b,tag:{sword:1b}}]}] run item modify entity @s container.1 game:sword

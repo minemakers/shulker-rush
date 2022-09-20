@@ -1,5 +1,3 @@
-advancement revoke @s only game:fast_travel
-
 gamemode adventure @s
 clear @s minecraft:ender_eye
 function game:managers/players/spawn
