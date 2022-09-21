@@ -15,6 +15,7 @@ execute positioned 3002 234 -61 run function game:resources/prefabs/upgraders/va
 execute positioned 3062 234 19 run function game:resources/prefabs/upgraders/variants/green
 execute positioned 2982 234 79 run function game:resources/prefabs/upgraders/variants/yellow
 
+function game:managers/merchants/variants/default
 execute positioned 3005.5 232 22.5 rotated -45 0 run function game:resources/prefabs/merchant
 execute positioned 2979.5 232 22.5 rotated 45 0 run function game:resources/prefabs/merchant
 execute positioned 2979.5 232 -3.5 rotated 135 0 run function game:resources/prefabs/merchant
