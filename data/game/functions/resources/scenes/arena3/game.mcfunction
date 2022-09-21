@@ -26,7 +26,7 @@ execute if entity @a[team=blue,limit=1] positioned 2985 231 -61 run function gam
 execute if entity @a[team=green,limit=1] positioned 3062 231 2 run function game:resources/prefabs/shulkers/variants/green
 execute if entity @a[team=yellow,limit=1] positioned 2999 231 79 run function game:resources/prefabs/shulkers/variants/yellow
 
-execute positioned 2992.5 256 9.5 run function game:resources/prefabs/spawners/crystal
+execute positioned 2992.5 248 9.5 run function game:resources/prefabs/spawners/crystal
 execute positioned 2992.5 227 9.5 run function game:resources/prefabs/spawners/crystal
 execute if entity @a[team=red,limit=1] positioned 2922.5 231 7.5 run function game:resources/prefabs/spawners/variants/red
 execute if entity @a[team=blue,limit=1] positioned 2994.5 231 -60.5 run function game:resources/prefabs/spawners/variants/blue
