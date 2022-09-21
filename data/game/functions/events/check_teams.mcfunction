@@ -8,4 +8,4 @@ execute if score #count var matches ..1 as @a[scores={playerId=0..}] unless scor
 execute if score #count var matches ..1 as @a[scores={playerId=0..}] unless score @s confirm matches 0.. run scoreboard players set @a confirm 0
 execute if score #count var matches ..1 run scoreboard players enable @a[scores={playerId=0..}] confirm
 
-schedule function game:events/check_teams 5s
+execute if score $status var matches 2 run schedule function game:events/check_teams 5s

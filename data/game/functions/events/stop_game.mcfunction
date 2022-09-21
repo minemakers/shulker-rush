@@ -26,3 +26,6 @@ execute at @e[type=minecraft:marker,tag=shop] run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 mine
 
 function game:resources/scenes/lobby
 execute as @a run function game:managers/players/spawn
+
+schedule clear game:events/check_teams
+schedule clear game:events/check_players
