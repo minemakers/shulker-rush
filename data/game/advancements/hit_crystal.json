@@ -1,16 +1,21 @@
 {
-    "criteria": {
-        "_": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:slime",
-                    "nbt": "{Tags:[\"crystal_hitbox\"]}"
-                }
-            }
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "is_projectile": false
+          }
+        },
+        "entity": {
+          "type": "minecraft:slime",
+          "nbt": "{Tags:[\"crystal_hitbox\"]}"
         }
-    },
-    "rewards": {
-        "function": "game:events/proxy/hit_crystal"
+      }
     }
+  },
+  "rewards": {
+    "function": "game:events/proxy/hit_crystal"
+  }
 }
