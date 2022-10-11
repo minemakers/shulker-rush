@@ -78,6 +78,9 @@ gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
+execute if score $status var matches 2 run gamerule fallDamage true
+execute unless score $status var matches 2 run gamerule fallDamage false
+
 setblock 0 10 0 minecraft:oak_sign
 setblock 0 1 0 minecraft:oak_sign
 setblock 0 0 0 minecraft:white_shulker_box
