@@ -15,7 +15,7 @@ scoreboard players set @a deathCount 0
 scoreboard players set @a armorLevel 0
 scoreboard players set @a swordLevel 0
 
-function game:resources/scenes/game
+execute as @a[limit=1,sort=arbitrary] run function game:resources/scenes/game
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red] run spawnpoint @a[team=red] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue] run spawnpoint @a[team=blue] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green] run spawnpoint @a[team=green] ~ ~ ~
