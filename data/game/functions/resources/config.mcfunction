@@ -1,3 +1,8 @@
+data modify storage game:core i18n set value []
+data modify storage game:core i18n append value {"name":"English", "function": "function #game:resources/lang/en"}
+data modify storage game:core i18n append value {"name":"French", "function": "function #game:resources/lang/fr"}
+data modify storage game:core i18n append value {"name":"Russian", "function": "function #game:resources/lang/ru"}
+
 scoreboard players reset * config
 
 scoreboard players set $timer.respawn config 100
