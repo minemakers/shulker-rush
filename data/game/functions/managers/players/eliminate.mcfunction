@@ -10,4 +10,4 @@ execute if entity @a[team=red,scores={playerId=0..}] run scoreboard players add 
 execute if entity @a[team=blue,scores={playerId=0..}] run scoreboard players add #count var 1
 execute if entity @a[team=green,scores={playerId=0..}] run scoreboard players add #count var 1
 execute if entity @a[team=yellow,scores={playerId=0..}] run scoreboard players add #count var 1
-execute if score #count var matches ..1 run function game:events/end_game
+execute if score #count var matches ..1 run function #game:events/end_game

@@ -25,8 +25,8 @@ fill 1020 238 52 1016 238 53 minecraft:water replace #game:water_and_air
 # Don't leave pistons, just in case
 execute at @e[type=minecraft:marker,tag=shop] run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:moving_piston
 
-function game:resources/scenes/lobby
+function #game:resources/scenes/lobby
 execute as @a run function game:managers/players/spawn
 
-schedule clear game:events/check_teams
-schedule clear game:events/check_players
+schedule clear #game:events/check_teams
+schedule clear #game:events/check_players

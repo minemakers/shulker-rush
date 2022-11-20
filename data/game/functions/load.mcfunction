@@ -1,5 +1,5 @@
 function game:init
-function game:resources/config
+function #game:resources/config
 
 execute unless score $arena var matches 0.. run scoreboard players set $arena var 1
 execute unless score $status var matches 0.. run scoreboard players set $status var 0

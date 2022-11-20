@@ -1,7 +1,7 @@
 gamemode spectator @s
 function game:managers/players/loot
-execute if entity @s[advancements={game:killed_by_player=false}] run function game:events/killed_by_self
-execute if entity @s[advancements={game:killed_by_player=true}] run function game:events/killed_by_player
+execute if entity @s[advancements={game:killed_by_player=false}] run function #game:events/killed_by_self
+execute if entity @s[advancements={game:killed_by_player=true}] run function #game:events/killed_by_player
 
 execute if entity @s[team=red] run effect give @e[type=minecraft:shulker,team=red] minecraft:glowing 5 0 true
 execute if entity @s[team=blue] run effect give @e[type=minecraft:shulker,team=blue] minecraft:glowing 5 0 true

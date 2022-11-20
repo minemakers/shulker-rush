@@ -16,7 +16,7 @@ scoreboard players set @a deathCount 0
 scoreboard players set @a armorLevel 0
 scoreboard players set @a swordLevel 0
 
-execute as @a[limit=1,sort=arbitrary] run function game:resources/scenes/game
+execute as @a[limit=1,sort=arbitrary] run function #game:resources/scenes/game
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red] run spawnpoint @a[team=red] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue] run spawnpoint @a[team=blue] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green] run spawnpoint @a[team=green] ~ ~ ~
@@ -29,6 +29,6 @@ loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:air{contents:1b}
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/respawn
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/initialize
 
-schedule function game:events/check_teams 1t
+schedule function #game:events/check_teams 1t
 schedule function game:managers/shulkers/powers 1t
 schedule function game:resources/views/screen/actionbar 1t

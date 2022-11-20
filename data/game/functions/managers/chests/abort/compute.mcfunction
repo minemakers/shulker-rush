@@ -10,4 +10,4 @@ scoreboard players set #source.slot var -1
 scoreboard players set #target.slot var 100
 function game:managers/chests/abort/slots/next
 loot give @s mine 0 0 0 minecraft:air{contents:1b}
-function game:events/save_inventory
+function #game:events/save_inventory

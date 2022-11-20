@@ -4,4 +4,4 @@ execute if score #count var matches ..1 as @a unless score @s confirm matches 0.
 execute if score #count var matches ..1 as @a unless score @s confirm matches 0.. run scoreboard players set @a confirm 0
 execute if score #count var matches ..1 run scoreboard players enable @a confirm
 
-execute if score $status var matches 1 run schedule function game:events/check_players 5s
+execute if score $status var matches 1 run schedule function #game:events/check_players 5s

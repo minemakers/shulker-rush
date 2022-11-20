@@ -8,7 +8,7 @@ summon minecraft:villager 5000.5 214 7.4 {Tags:["game_launcher"],ActiveEffects:[
 summon minecraft:armor_stand 5000.5 215.75 7.05 {Tags:["lang.game_launcher"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 215.5 7.05 {Tags:["lang.click_me"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
-setblock 5000 214 6 minecraft:dark_oak_wall_sign[facing=north]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function game:events/next_arena"}}'}
+setblock 5000 214 6 minecraft:dark_oak_wall_sign[facing=north]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function #game:events/next_arena"}}'}
 summon minecraft:armor_stand 5000.5 213.6 7.05 {Tags:["arena_head"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b}],Rotation:[180f,0f],Marker:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:1b,NoGravity:1b}
 summon minecraft:armor_stand 5000 217.9 11 {Tags:["arena1"],CustomName:'{"text":""}',CustomNameVisible:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b}
 summon minecraft:armor_stand 5006 217.9 10 {Tags:["arena2"],CustomName:'{"text":""}',CustomNameVisible:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b}

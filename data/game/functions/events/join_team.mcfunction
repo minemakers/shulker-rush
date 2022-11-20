@@ -3,7 +3,7 @@ execute if entity @s[advancements={game:join_team={blue=true}}] run team join bl
 execute if entity @s[advancements={game:join_team={green=true}}] run team join green @s
 execute if entity @s[advancements={game:join_team={yellow=true}}] run team join yellow @s
 
-function game:events/countdown
+function #game:events/countdown
 
 gamemode spectator @s[team=players]
 execute if entity @s[team=players] run function game:managers/players/spawn
