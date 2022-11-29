@@ -47,9 +47,9 @@ data modify storage game:lang stop.prompt set value {text: "Il semblerait que qu
 data modify storage game:lang click_me set value "Cliquez moi"
 data modify storage game:lang click_here set value "Cliquez ici"
 data modify storage game:lang click_open set value "Cliquez pour ouvrir"
-data modify storage game:lang game_launcher set value "Commencer la partie"
-data modify storage game:lang arena_picker set value "Changer d'arène"
-data modify storage game:lang lang_picker set value "Changer la langue"
+data modify storage game:lang game_launcher set value "Démarrer la partie"
+data modify storage game:lang arena_picker set value "Arène suivante"
+data modify storage game:lang lang_picker set value "Langue suivante"
 
 data modify storage game:lang team_picker.red set value "Équipe Rouge"
 data modify storage game:lang team_picker.blue set value "Équipe Bleue"
