@@ -1,5 +1,5 @@
 {
   "values": [
-      "game:events/save_inventory"
+    "game:events/save_inventory"
   ]
 }
