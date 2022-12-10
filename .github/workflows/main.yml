@@ -27,5 +27,6 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            .editorconfig
             README.md
             LICENSE
