@@ -76,7 +76,7 @@ data modify storage game:lang shulker_death.blue set value {message: "Le Shulker
 data modify storage game:lang shulker_death.green set value {message: "Le Shulker Vert a été tué !", warning: "Les joueurs Verts ne peuvent plus réapparaître..."}
 data modify storage game:lang shulker_death.yellow set value {message: "Le Shulker jaune a été tué !", warning: "Les joueurs Yellow ne peuvent plus réapparaître..."}
 
-data modify storage game:lang errors.launch set value "Désolé, il n'y a pas assez de joueurs pour commencer la partie !"
+data modify storage game:lang errors.ready set value "Désolé, il n'y a pas assez de joueurs pour commencer la partie !"
 data modify storage game:lang errors.shulker_block set value "Une erreur est survenue lors du placement du shulker!"
 data modify storage game:lang errors.shulker_island set value "Vous ne pouvez pas placer le shulker hors de son île !"
 data modify storage game:lang errors.shop_money set value "Vous n'avez pas assez d'argent pour acheter cet objet !"

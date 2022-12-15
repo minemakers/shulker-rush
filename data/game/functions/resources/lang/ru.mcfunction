@@ -76,7 +76,7 @@ data modify storage game:lang shulker_death.blue set value {message: "Синий
 data modify storage game:lang shulker_death.green set value {message: "Зелёный шалкер был убит!", warning: "Зелёные игроки больше не могут возрождаться..."}
 data modify storage game:lang shulker_death.yellow set value {message: "Жёлтый шалкер был убит!", warning: "Жёлтые игроки больше не могут возрождаться..."}
 
-data modify storage game:lang errors.launch set value "Извините, недостаточно игроков для начала игры!"
+data modify storage game:lang errors.ready set value "Извините, недостаточно игроков для начала игры!"
 data modify storage game:lang errors.shulker_block set value "Ошибка установки Шалкера!"
 data modify storage game:lang errors.shulker_island set value "Вы не можете установить шалкер вне своего острова!"
 data modify storage game:lang errors.shop_money set value "У вас недостаточно ресурсов чтобы купить этот предмет!"
