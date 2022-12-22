@@ -26,8 +26,8 @@ data merge block 0 0 0 {Items:[]}
 data remove storage game:core chests
 data remove storage game:core players
 loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:air{contents:1b}
+execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/init
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/respawn
-execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/initialize
 
 schedule function #game:events/check_teams 1t
 schedule function game:managers/shulkers/powers 1t
