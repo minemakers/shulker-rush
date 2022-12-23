@@ -1,6 +1,9 @@
 {
   "criteria": {
-    "inv": {
+    "_": {
+      "trigger": "minecraft:impossible"
+    },
+    "changed": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": [
@@ -15,9 +18,6 @@
           }
         ]
       }
-    },
-    "impossible": {
-      "trigger": "minecraft:impossible"
     }
   }
 }

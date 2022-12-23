@@ -98,6 +98,6 @@
     ]
   ],
   "rewards": {
-    "function": "game:events/proxy/change_sword"
+    "function": "game:events/proxy/replace_sword"
   }
 }
