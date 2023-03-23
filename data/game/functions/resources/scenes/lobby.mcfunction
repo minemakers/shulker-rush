@@ -4,7 +4,7 @@ kill @e[type=!player]
 fill 5009 219 -6 4991 213 7 minecraft:barrier hollow
 setblock 5000 215 7 air
 
-summon minecraft:interaction 5000.5 214 7.4 {Tags:["game_launcher"],height:2}
+summon minecraft:interaction 5000 215 7.05 {Tags:["game_launcher"],height:0.8,width:0.8}
 summon minecraft:armor_stand 5000.5 215.75 7.05 {Tags:["lang.game_launcher"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 215.5 7.05 {Tags:["lang.click_me"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
@@ -28,7 +28,7 @@ summon minecraft:armor_stand 4997.5 213.6 7.05 {Invulnerable:1,Invisible:1,NoBas
 summon minecraft:armor_stand 4996.5 213.6 7.05 {Invulnerable:1,Invisible:1,NoBasePlate:1,Rotation:[180f,0f],DisabledSlots:2096896,NoGravity:1,Marker:1,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1575406026,1578322712,-1912974436,1686260914],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjZlMjdkYTEyODE5YThiMDUzZGEwY2MyYjYyZGVjNGNkYTkxZGU2ZWVlYzIxY2NmM2JmZTZkZDhkNDQzNmE3In19fQ=="}]}}}}]}
 
 summon minecraft:armor_stand 5000.5 212.5 -5.2 {ArmorItems:[{},{},{},{id:"minecraft:writable_book",Count:1b}],Rotation:[180f,0f],Marker:1b,Invulnerable:1b,Invisible:1b,NoBasePlate:1b,NoGravity:1b}
-summon minecraft:interaction 5000.5 213 -4.8 {Tags:["lang_picker"],height:2}
+summon minecraft:interaction 5000 214.4 -5.0 {Tags:["lang_picker"],height:0.8,width:0.8}
 summon minecraft:armor_stand 5000.5 213.75 -5.0 {Tags:["lang.lang_picker"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 summon minecraft:armor_stand 5000.5 213.5 -5.0 {Tags:["lang.click_me"],CustomNameVisible:1,Invulnerable:1,Invisible:1,NoBasePlate:1,NoGravity:1,Marker:1}
 
