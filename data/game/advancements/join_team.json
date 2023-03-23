@@ -4,7 +4,7 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:villager",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"red\"]}"
         }
       }
@@ -13,7 +13,7 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:villager",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"blue\"]}"
         }
       }
@@ -22,7 +22,7 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:villager",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"green\"]}"
         }
       }
@@ -31,7 +31,7 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:villager",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"yellow\"]}"
         }
       }

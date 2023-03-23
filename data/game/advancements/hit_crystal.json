@@ -5,11 +5,16 @@
       "conditions": {
         "damage": {
           "type": {
-            "is_projectile": false
+            "tags": [
+              {
+                "id": "minecraft:projectile",
+                "expected": false
+              }
+            ]
           }
         },
         "entity": {
-          "type": "minecraft:slime",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"crystal_hitbox\"]}"
         }
       }
