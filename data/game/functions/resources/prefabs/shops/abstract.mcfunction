@@ -9,13 +9,9 @@ execute rotated as @s run fill ^1 ^ ^1 ^-1 ^ ^1 minecraft:moving_piston replace 
 data modify block 0 1 0 Text1 set value '{"nbt":"shop.name","storage":"game:lang"}'
 data modify block ~ ~ ~ CustomName set from block 0 1 0 Text1
 
-execute at @s run summon minecraft:area_effect_cloud ^ ^.4 ^.8 {Tags:["shop_name"],Duration:-1,WaitTime:-2147483648,CustomNameVisible:1b}
-execute at @s run summon minecraft:area_effect_cloud ^ ^.2 ^.8 {Tags:["shop_usage"],Duration:-1,WaitTime:-2147483648,CustomNameVisible:1b}
-execute at @s run summon minecraft:armor_stand ^ ^-.45 ^.35 {HasVisualFire:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-2076843989,-590066462,-1715884237,465001183],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkyNmMxZjJjM2MxNGQwODZjNDBjZmMyMzVmZTkzODY5NGY0YTUxMDY3YWRhNDcyNmI0ODZlYTFjODdiMDNlMiJ9fX0="}]}}}}],Marker:1b,NoGravity:1b,NoBasePlate:1b,Invisible:1b,Small:1b}
-
-data modify block 0 1 0 Text1 set value '{"nbt":"shop.name","storage":"game:lang","color":"green","bold":true}'
-data modify entity @e[type=minecraft:area_effect_cloud,tag=shop_name,sort=nearest,limit=1] CustomName set from block 0 1 0 Text1
-data modify block 0 1 0 Text1 set value '{"nbt":"shop.usage","storage":"game:lang","color":"gray","italic":true}'
-data modify entity @e[type=minecraft:area_effect_cloud,tag=shop_usage,sort=nearest,limit=1] CustomName set from block 0 1 0 Text1
+execute at @s run summon minecraft:text_display ^ ^1.3 ^.6 {Tags:["shop_display"],text:'{"nbt":"shop.name","storage":"game:lang","color":"green","bold":true}'}
+execute at @s run summon minecraft:text_display ^ ^1.0 ^.6 {Tags:["shop_display"],text:'{"nbt":"shop.usage","storage":"game:lang","color":"gray","italic":true}'}
+execute at @s run summon minecraft:item_display ^ ^.75 ^.35 {Tags:["shop_display"],brightness:{block:15,sky:15},item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-2076843989,-590066462,-1715884237,465001183],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkyNmMxZjJjM2MxNGQwODZjNDBjZmMyMzVmZTkzODY5NGY0YTUxMDY3YWRhNDcyNmI0ODZlYTFjODdiMDNlMiJ9fX0="}]}}}}}
+execute at @s as @e[tag=shop_display] positioned as @s run tp @s ~ ~ ~ ~ ~
 
 function game:resources/views/game/gui/shop

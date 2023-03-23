@@ -30,15 +30,15 @@ data modify storage game:lang rules.objective append value [{strong: "коман
 data modify storage game:lang rules.objective append value [{text: "и может быть побеждена."}]
 
 data modify storage game:lang rules.spawners append value [{ref: 0}, {text: " и "}, {ref: 1}, {text: " появляются"}]
-data modify storage game:lang rules.spawners append value [{text: "на острове каждой команды."}]
-data modify storage game:lang rules.spawners append value [{text: "Генераторы "}, {ref: 2}, {"text":" можно найти на центральных островах."}]
-data modify storage game:lang rules.spawners append value [{text: "Эти 3 предмета дают возможность"}]
+data modify storage game:lang rules.spawners append value [{text: "на острове каждой команды. Генераторы"}]
+data modify storage game:lang rules.spawners append value [{ref: 2}, {"text":" можно найти на центральных"}]
+data modify storage game:lang rules.spawners append value [{text: "островах. Эти 3 предмета дают возможность"}]
 data modify storage game:lang rules.spawners append value [{strong: "покупать предметы"}, {text: " в магазине."}]
 
 data modify storage game:lang rules.upgrades append value [{text: "Убийство игрока временно"}]
-data modify storage game:lang rules.upgrades append value [{strong: "подсвечивает Шалкер его команды"}]
-data modify storage game:lang rules.upgrades append value [{text: "и даёт вам "}, {ref: 3}, {text: ","}]
-data modify storage game:lang rules.upgrades append value [{text: "за которые можно"}]
+data modify storage game:lang rules.upgrades append value [{strong: "подсвечивает Шалкер его"}]
+data modify storage game:lang rules.upgrades append value [{strong: "команды"}, {text: " и даёт вам "}]
+data modify storage game:lang rules.upgrades append value [{ref: 3}, {text: ", "}, {text: "за которые можно"}]
 data modify storage game:lang rules.upgrades append value [{strong: "прокачивать ваши способности"}, {text: "."}]
 
 data modify storage game:lang rules.prompt set value {text: "Игровые правила", action: "показать", "hover": "Нажмите, чтобы посмотреть правила!"}

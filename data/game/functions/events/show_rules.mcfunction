@@ -1,6 +1,6 @@
 scoreboard players reset @s rules
 scoreboard players enable @s rules
 
-execute unless data storage game:core messages.rules.formatted run function game:resources/views/lobby/formatters/rules
-tellraw @s [{"text":"\n","color":"gray"},{"storage":"game:core","nbt":"messages.rules.formatted","interpret":true},{"text":"\n"}]
+execute unless data storage game:lang rules.full run function game:resources/views/rules/format
+tellraw @s [{"text":"\n","color":"gray"},{"storage":"game:lang","nbt":"rules.full","interpret":true},{"text":"\n"}]
 execute at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 10000 1.7

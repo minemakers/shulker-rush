@@ -8,14 +8,8 @@ scoreboard players set @s swordLevel 0
 data modify block 0 1 0 Text1 set value '{"nbt":"upgrader.name","storage":"game:lang"}'
 data modify block ~ ~ ~ CustomName set from block 0 1 0 Text1
 
-summon minecraft:area_effect_cloud ~ ~1 ~ {Tags:["upgrader_name"],Duration:-1,WaitTime:-2147483648,CustomNameVisible:1}
-data modify block 0 1 0 Text1 set value '{"nbt":"upgrader.name","storage":"game:lang","color":"red","bold":true}'
-data modify entity @e[type=minecraft:area_effect_cloud,tag=upgrader_name,sort=nearest,limit=1] CustomName set from block 0 1 0 Text1
-
-summon minecraft:area_effect_cloud ~ ~.75 ~ {Tags:["upgrader_usage"],Duration:-1,WaitTime:-2147483648,CustomNameVisible:1}
-data modify block 0 1 0 Text1 set value '{"nbt":"upgrader.usage","storage":"game:lang","color":"gray","italic":true}'
-data modify entity @e[type=minecraft:area_effect_cloud,tag=upgrader_usage,sort=nearest,limit=1] CustomName set from block 0 1 0 Text1
-
-summon minecraft:armor_stand ~ ~.15 ~.18 {ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b}],Pose:{Head:[-90f,0f,0f]},Marker:1b,NoGravity:1b,NoBasePlate:1b,Invisible:1b,Small:1b}
+execute at @s run summon minecraft:text_display ~ ~1.9 ~ {Tags:["shop_display"],text:'{"nbt":"upgrader.name","storage":"game:lang","color":"red","bold":true}',billboard:"center"}
+execute at @s run summon minecraft:text_display ~ ~1.6 ~ {Tags:["shop_display"],text:'{"nbt":"upgrader.usage","storage":"game:lang","color":"gray","italic":true}',billboard:"center"}
+execute at @s run summon minecraft:block_display ~-.3 ~.65 ~-.3 {Tags:["shop_display"],block_state:{Name:"minecraft:command_block",Properties:{facing:"up"}},transformation:{scale:[0.6f,0.6f,0.6f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
 
 function game:resources/views/game/gui/upgrader
