@@ -1,7 +1,17 @@
-on: push
 name: 🚀 Validate and deploy datapack
 env:
   MC_VERSION: '1.19'
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      forceUpload:
+        type: boolean
+        description: "Force uploading all files"
+      removeExtraFilesOnServer:
+        type: boolean
+        description: "Remove extra files on server"
+        default: true
 jobs:
   check:
     name: Check commands
@@ -18,15 +28,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: minemakers.net
-          server-dir: /world/datapacks/shulker-rush/
-          username: minemakers.3
-          password: ${{ secrets.FTP_PASSWORD }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .editorconfig
-            README.md
-            LICENSE
+          fetch-depth: 0
+      - uses: chetan/git-restore-mtime-action@v2
+      - uses: wangyucode/sftp-upload-action@v2.0.2
+        with:
+          host: servers.minemakers.net
+          port: 5657
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          compress: true
+          localDir: '.'
+          remoteDir: './shulker-rush/datapacks/shulker-rush/'
+          exclude: '.git*/**,.gitattributes,.editorconfig,README.md,LICENSE'
+          removeExtraFilesOnServer: true
