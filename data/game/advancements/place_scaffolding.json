@@ -3,13 +3,21 @@
     "_": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:scaffolding"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:scaffolding"
+                  ]
+                }
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

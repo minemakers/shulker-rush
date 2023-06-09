@@ -5,8 +5,8 @@ scoreboard players set @s shulkerLevel 0
 scoreboard players set @s spawnerLevel 0
 scoreboard players set @s swordLevel 0
 
-data modify block 0 1 0 Text1 set value '{"nbt":"upgrader.name","storage":"game:lang"}'
-data modify block ~ ~ ~ CustomName set from block 0 1 0 Text1
+data modify block 0 1 0 front_text.messages[0] set value '{"nbt":"upgrader.name","storage":"game:lang"}'
+data modify block ~ ~ ~ CustomName set from block 0 1 0 front_text.messages[0]
 
 execute at @s run summon minecraft:text_display ~ ~1.9 ~ {Tags:["shop_display"],text:'{"nbt":"upgrader.name","storage":"game:lang","color":"red","bold":true}',billboard:"center"}
 execute at @s run summon minecraft:text_display ~ ~1.6 ~ {Tags:["shop_display"],text:'{"nbt":"upgrader.usage","storage":"game:lang","color":"gray","italic":true}',billboard:"center"}

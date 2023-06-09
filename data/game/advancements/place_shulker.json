@@ -3,49 +3,81 @@
     "red": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:red_shulker_box"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:red_shulker_box"
+                  ]
+                }
+              }
+            }
           }
-        }
+        ]
       }
     },
     "blue": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:cyan_shulker_box"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:cyan_shulker_box"
+                  ]
+                }
+              }
+            }
           }
-        }
+        ]
       }
     },
     "green": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:lime_shulker_box"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:lime_shulker_box"
+                  ]
+                }
+              }
+            }
           }
-        }
+        ]
       }
     },
     "yellow": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:yellow_shulker_box"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:yellow_shulker_box"
+                  ]
+                }
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

@@ -3,11 +3,19 @@
     "_": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "tag": "game:useable"
+        "location": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "tag": "game:useable"
+                }
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
