@@ -5,15 +5,12 @@
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "minecraft:red_shulker_box"
-                  ]
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:red_shulker_box"
+                ]
               }
             }
           }
@@ -25,15 +22,12 @@
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "minecraft:cyan_shulker_box"
-                  ]
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:cyan_shulker_box"
+                ]
               }
             }
           }
@@ -45,15 +39,12 @@
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "minecraft:lime_shulker_box"
-                  ]
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:lime_shulker_box"
+                ]
               }
             }
           }
@@ -65,15 +56,12 @@
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "minecraft:yellow_shulker_box"
-                  ]
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:yellow_shulker_box"
+                ]
               }
             }
           }

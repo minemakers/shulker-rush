@@ -5,15 +5,12 @@
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "minecraft:scaffolding"
-                  ]
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:scaffolding"
+                ]
               }
             }
           }
