@@ -1,6 +1,4 @@
-name: 🚀 Validate and deploy datapack
-env:
-  MC_VERSION: '1.19'
+name: 🚀 Deploy datapack
 on:
   push:
     branches:
@@ -16,16 +14,8 @@ on:
         default: true
 jobs:
   check:
-    name: Check commands
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: mcbeet/check-commands@v1
-        with:
-          source: .
-          minecraft: ${{ env.MC_VERSION }}
+    uses: ./.github/workflows/check.yml
   deploy:
-    name: Deploy datapack
     needs: check
     runs-on: ubuntu-latest
     steps:
