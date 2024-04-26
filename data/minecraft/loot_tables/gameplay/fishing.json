@@ -6,18 +6,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/iron",
-          "weight": 60
+          "weight": 60,
+          "value": "game:items/iron"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/gold",
-          "weight": 40
+          "weight": 40,
+          "value": "game:items/gold"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/crystal",
-          "weight": 20
+          "weight": 20,
+          "value": "game:items/crystal"
         }
       ]
     }

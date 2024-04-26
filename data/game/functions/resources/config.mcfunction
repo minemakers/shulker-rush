@@ -45,7 +45,7 @@ scoreboard players set $cost.explosive_bottle.crystal config 3
 scoreboard players set $cost.firework_rocket.crystal config 2
 scoreboard players set $cost.fishing_rod.iron config 32
 scoreboard players set $cost.golden_axe.crystal config 3
-scoreboard players set $cost.golden_sword.crystal config 4
+scoreboard players set $cost.golden_sword.crystal config 2
 scoreboard players set $cost.iron_armor.gold config 12
 scoreboard players set $cost.iron_sword.gold config 6
 scoreboard players set $cost.oak_planks.iron config 16

@@ -1,12 +1,61 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "type_specific": {
-      "type": "player",
-      "looking_at": {
-        "type": "minecraft:shulker"
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "type": "minecraft:shulker",
+            "team": "red"
+          }
+        },
+        "team": "red"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "type": "minecraft:shulker",
+            "team": "blue"
+          }
+        },
+        "team": "blue"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "type": "minecraft:shulker",
+            "team": "green"
+          }
+        },
+        "team": "green"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "type": "minecraft:shulker",
+            "team": "yellow"
+          }
+        },
+        "team": "yellow"
       }
     }
-  }
+  ]
 }

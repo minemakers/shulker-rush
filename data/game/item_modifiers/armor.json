@@ -5,13 +5,13 @@
       "minecraft:protection": {
         "type": "minecraft:score",
         "target": "this",
-        "score": "armorLevel"
+        "score": "armor_level"
       }
     }
   },
   {
     "function": "minecraft:set_lore",
-    "replace": true,
+    "mode": "replace_all",
     "lore": [
       [
         {
@@ -30,7 +30,7 @@
         "value": {
           "type": "minecraft:score",
           "target": "this",
-          "score": "armorLevel"
+          "score": "armor_level"
         },
         "range": 1
       }
@@ -38,7 +38,7 @@
   },
   {
     "function": "minecraft:set_lore",
-    "replace": true,
+    "mode": "replace_all",
     "lore": [
       [
         {
@@ -57,7 +57,7 @@
         "value": {
           "type": "minecraft:score",
           "target": "this",
-          "score": "armorLevel"
+          "score": "armor_level"
         },
         "range": 2
       }
@@ -65,7 +65,7 @@
   },
   {
     "function": "minecraft:set_lore",
-    "replace": true,
+    "mode": "replace_all",
     "lore": [
       [
         {
@@ -84,7 +84,7 @@
         "value": {
           "type": "minecraft:score",
           "target": "this",
-          "score": "armorLevel"
+          "score": "armor_level"
         },
         "range": 3
       }

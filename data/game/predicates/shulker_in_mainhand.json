@@ -1,11 +1,13 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "equipment": {
-            "mainhand": {
-                "tag": "game:shulkers"
-            }
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "#game:shulkers"
+        ]
+      }
     }
+  }
 }

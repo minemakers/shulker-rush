@@ -1,7 +1,11 @@
-# Prevent item voiding, 5 items in the upgrader means there's something that shouldn't be there.
-execute store result score #count var run data get block ~ ~ ~ Items
-execute if score #count var matches 5 run function game:managers/upgraders/rollback
+# Prevent item voiding, total not equal to count means there's something that shouldn't be there.
+execute store result score #total var run data get block ~ ~ ~ Items
+data modify storage game:core tmp set value []
+execute if score #count var < #total var run data modify storage game:core tmp set from block ~ ~ ~ Items
+execute if score #count var < #total var run data remove storage game:core tmp[{components:{"minecraft:custom_data":{upgrade_id:{}}}}]
 
 data modify block ~ ~ ~ Items set from entity @s[type=minecraft:marker] data.Items
-execute as @a[gamemode=!spectator,distance=..7] run function game:managers/upgraders/purchase/check
-kill @e[type=minecraft:item,nbt={Item:{tag:{upgradeId:{}}}}]
+execute as @a[gamemode=!spectator,distance=..7] if items entity @s player.cursor *[minecraft:custom_data~{upgrade_id:{}}] run function game:managers/upgraders/purchase/handle
+
+clear @a #game:all[custom_data~{upgrade_id:{}}]
+kill @e[type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{upgrade_id:{}}}}}]

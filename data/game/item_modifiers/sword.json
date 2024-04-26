@@ -5,20 +5,20 @@
       "minecraft:sharpness": {
         "type": "minecraft:score",
         "target": "this",
-        "score": "swordLevel"
+        "score": "sword_level"
       }
     }
   },
   {
-    "function": "minecraft:copy_nbt",
+    "function": "minecraft:copy_custom_data",
     "source": {
       "type": "minecraft:storage",
       "source": "game:core"
     },
     "ops": [
       {
-        "source": "swordLevel",
-        "target": "swordLevel",
+        "source": "sword_level",
+        "target": "sword_level",
         "op": "replace"
       }
     ]

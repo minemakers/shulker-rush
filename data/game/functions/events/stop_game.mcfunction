@@ -6,16 +6,16 @@ clear @a
 team join players @a
 gamemode adventure @a
 
-scoreboard players reset * playerId
-scoreboard players reset * killCount
-scoreboard players reset * deathCount
-scoreboard players reset * armorLevel
-scoreboard players reset * swordLevel
-scoreboard players reset * respawnTimer
+scoreboard players reset * player_id
+scoreboard players reset * kill_count
+scoreboard players reset * death_count
+scoreboard players reset * armor_level
+scoreboard players reset * sword_level
+scoreboard players reset * respawn_timer
 
 # Clear the area before teleporting players to the lobby
-execute as @e[type=marker,tag=useable_blocks] at @s if entity @s[y=309,dy=50] run tp @s ~ 307 ~
-execute at @e[type=marker,tag=useable_blocks] run fill ~17 ~12 ~17 ~-17 ~-12 ~-17 air replace #game:useable
+execute as @e[type=minecraft:marker,tag=useable_blocks] at @s if entity @s[y=309,dy=50] run tp @s ~ 307 ~
+execute at @e[type=minecraft:marker,tag=useable_blocks] run fill ~17 ~12 ~17 ~-17 ~-12 ~-17 air replace #game:useable
 
 fill 996 238 42 991 237 51 minecraft:water replace #game:water_and_air
 fill 992 238 52 996 237 53 minecraft:water replace #game:water_and_air

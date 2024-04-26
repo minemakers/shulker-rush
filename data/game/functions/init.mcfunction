@@ -30,21 +30,21 @@ scoreboard objectives add const dummy
 scoreboard objectives add config dummy
 
 scoreboard objectives add souls dummy
-scoreboard objectives add armorLevel dummy
-scoreboard objectives add respawnTimer dummy
-scoreboard objectives add shulkerHealth dummy
-scoreboard objectives add shulkerLevel dummy
-scoreboard objectives add spawnerLevel dummy
-scoreboard objectives add spawnerTimer dummy
-scoreboard objectives add swordLevel dummy
-scoreboard objectives add playerId dummy
+scoreboard objectives add armor_level dummy
+scoreboard objectives add respawn_timer dummy
+scoreboard objectives add shulker_health dummy
+scoreboard objectives add shulker_level dummy
+scoreboard objectives add spawner_level dummy
+scoreboard objectives add spawner_timer dummy
+scoreboard objectives add sword_level dummy
+scoreboard objectives add player_id dummy
 
 scoreboard objectives add rules trigger
 scoreboard objectives add confirm trigger
 
 scoreboard objectives add food food
-scoreboard objectives add killCount playerKillCount
-scoreboard objectives add deathCount deathCount
+scoreboard objectives add kill_count playerKillCount
+scoreboard objectives add death_count deathCount
 scoreboard objectives add pickup minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add connect minecraft.custom:minecraft.leave_game
 
@@ -70,11 +70,14 @@ gamerule doWardenSpawning false
 gamerule doWeatherCycle false
 gamerule keepInventory true
 gamerule logAdminCommands false
+gamerule maxCommandChainLength 65536
+gamerule maxCommandForkCount 65536
 gamerule mobGriefing false
 gamerule naturalRegeneration true
 gamerule randomTickSpeed 0
 gamerule reducedDebugInfo true
-gamerule sendCommandFeedback false
+# TODO: CHANGE TO FALSE
+gamerule sendCommandFeedback true
 gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false

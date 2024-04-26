@@ -6,8 +6,10 @@ execute if entity @s[team=green] run data modify storage game:core chests.target
 execute if entity @s[team=yellow] run data modify storage game:core chests.target set from storage game:core chests.yellow
 
 data modify block 0 0 0 Items set value []
-scoreboard players set #source.slot var -1
+scoreboard players set #source.slot var 100
 scoreboard players set #target.slot var 100
 function game:managers/chests/abort/slots/next
-loot give @s mine 0 0 0 minecraft:air{contents:1b}
+
+item replace entity @s player.cursor with minecraft:air
+loot give @s mine 0 0 0 minecraft:anvil[custom_data={drop_contents:1b}]
 function #game:events/save_inventory with entity @s

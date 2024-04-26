@@ -1,7 +1,7 @@
-scoreboard players add $index playerId 1
-scoreboard players operation @s playerId = $index playerId
+scoreboard players add $index player_id 1
+scoreboard players operation @s player_id = $index player_id
 
-scoreboard players operation #bits var = @s playerId
+scoreboard players operation #bits var = @s player_id
 execute if score #bits var matches 64.. run tag @s add bit6
 execute if score #bits var matches 64.. run scoreboard players remove #bits var 64
 execute if score #bits var matches 32.. run tag @s add bit5

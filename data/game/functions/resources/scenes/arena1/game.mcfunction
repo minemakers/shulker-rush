@@ -17,8 +17,8 @@ execute positioned 1006.5 260 -5.5 run function game:resources/prefabs/spawners/
 execute positioned 1053.5 243 27.5 run function game:resources/prefabs/spawners/variants/blue
 execute positioned 959.5 243 27.5 run function game:resources/prefabs/spawners/variants/yellow
 
-summon minecraft:area_effect_cloud 1059.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","blue"],Rotation:[0f,10f]}
-summon minecraft:area_effect_cloud 953.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","yellow"],Rotation:[0f,10f]}
+summon minecraft:area_effect_cloud 1059.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","blue"],Rotation:[0.0f,10.0f]}
+summon minecraft:area_effect_cloud 953.5 245.7 17.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","yellow"],Rotation:[0.0f,10.0f]}
 
 # Spawn protection
 fill 1059 244 17 1059 247 20 minecraft:moving_piston replace minecraft:air

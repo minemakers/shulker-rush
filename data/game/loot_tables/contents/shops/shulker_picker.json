@@ -6,14 +6,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/shulker_picker",
+          "value": "game:items/shulker_picker",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{shopId:{b1:1b,b2:1b,b4:1b}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{shop_id:{b1:1b,b2:1b,b4:1b}}"
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -31,6 +32,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -73,6 +75,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -115,6 +118,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -157,6 +161,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -166,7 +171,7 @@
                 ],
                 [
                   {
-                    "text": "▶ ",
+                    "text": "\u25b6 ",
                     "color": "yellow",
                     "italic": false
                   },

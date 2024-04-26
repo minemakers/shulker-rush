@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/stained_glass",
+          "value": "game:blocks/stained_glass",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{shopId:{b0:1b,b1:1b,b4:1b}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{shop_id:{b0:1b,b1:1b,b4:1b}}"
             },
             {
               "function": "minecraft:set_name",
@@ -94,6 +94,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -111,6 +112,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -153,6 +155,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -195,6 +198,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -237,6 +241,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -246,7 +251,7 @@
                 ],
                 [
                   {
-                    "text": "▶ ",
+                    "text": "\u25b6 ",
                     "color": "yellow",
                     "italic": false
                   },

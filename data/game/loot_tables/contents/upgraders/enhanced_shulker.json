@@ -9,8 +9,17 @@
           "name": "minecraft:golden_carrot",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{upgradeId:{b1:1b},HideFlags:2}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{upgrade_id:{b1:1b}}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [],
+                  "show_in_tooltip": false
+                }
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -31,7 +40,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 0
+                    "shulker_level": 0
                   }
                 }
               ]
@@ -55,7 +64,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 1
+                    "shulker_level": 1
                   }
                 }
               ]
@@ -79,7 +88,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 2
+                    "shulker_level": 2
                   }
                 }
               ]
@@ -103,13 +112,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 3
+                    "shulker_level": 3
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -149,13 +159,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 0
+                    "shulker_level": 0
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -195,13 +206,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 1
+                    "shulker_level": 1
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -241,13 +253,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 2
+                    "shulker_level": 2
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -264,13 +277,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": 3
+                    "shulker_level": 3
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -290,6 +304,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -308,7 +323,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": {
+                    "shulker_level": {
                       "min": 2
                     }
                   }
@@ -317,6 +332,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -335,7 +351,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": {
+                    "shulker_level": {
                       "min": 1
                     }
                   }
@@ -344,6 +360,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -367,7 +384,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": {
+                    "shulker_level": {
                       "min": 0
                     }
                   }
@@ -376,11 +393,12 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
                   {
-                    "text": "▶ ",
+                    "text": "\u25b6 ",
                     "color": "yellow",
                     "italic": false
                   },
@@ -395,7 +413,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "shulkerLevel": {
+                    "shulker_level": {
                       "max": 2
                     }
                   }

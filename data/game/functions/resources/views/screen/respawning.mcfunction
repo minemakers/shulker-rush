@@ -1,7 +1,7 @@
 title @s times 0 50 10
 title @s title [{"text":"Shulker Rush II","color":"light_purple"}]
 
-scoreboard players operation #respawn var = @s respawnTimer
+scoreboard players operation #respawn var = @s respawn_timer
 scoreboard players operation #respawn var /= #20 const
 
 execute if score #respawn var matches 1 run title @s subtitle [{"storage":"game:lang","nbt":"respawning.1[0]","color":"gray"},{"score":{"name":"#respawn","objective":"var"}},{"storage":"game:lang","nbt":"respawning.1[1]"}]

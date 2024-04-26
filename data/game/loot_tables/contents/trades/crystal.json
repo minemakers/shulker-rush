@@ -5,8 +5,8 @@
       "rolls": 1,
       "entries": [
         {
+          "value": "game:items/iron",
           "type": "minecraft:loot_table",
-          "name": "game:items/iron",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/gold",
+          "value": "game:items/gold",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -36,7 +36,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/crystal"
+          "value": "game:items/crystal"
         }
       ]
     }

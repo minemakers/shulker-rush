@@ -9,8 +9,21 @@
           "name": "minecraft:raw_iron",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:8,drop:1b}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:can_break": {
+                  "predicates": [
+                    {
+                      "blocks": "#game:useable"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -20,7 +33,7 @@
                   "nbt": "iron",
                   "storage": "game:lang",
                   "color": "white",
-									"bold": true,
+                  "bold": true,
                   "italic": false
                 }
               ]

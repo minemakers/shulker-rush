@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/red_shulker",
+          "value": "game:blocks/red_shulker",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
@@ -25,7 +25,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/blue_shulker",
+          "value": "game:blocks/blue_shulker",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
@@ -44,7 +44,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/green_shulker",
+          "value": "game:blocks/green_shulker",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
@@ -63,7 +63,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/yellow_shulker",
+          "value": "game:blocks/yellow_shulker",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",

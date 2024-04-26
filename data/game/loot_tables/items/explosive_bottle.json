@@ -9,8 +9,35 @@
           "name": "minecraft:lingering_potion",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:40,CustomPotionColor:10362141,CustomPotionEffects:[{Id:1,Duration:0,ShowParticles:0b,ShowIcon:0b}],drop:1b}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:awkward",
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:speed",
+                      "amplifier": 0,
+                      "duration": 0,
+                      "show_particles": false,
+                      "show_icon": false
+                    }
+                  ],
+                  "custom_color": 10362141
+                },
+                "minecraft:can_break": {
+                  "predicates": [
+                    {
+                      "blocks": "#game:useable"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -26,6 +53,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "replace_all",
               "entity": "this",
               "lore": [
                 [

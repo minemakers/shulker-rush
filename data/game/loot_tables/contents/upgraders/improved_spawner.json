@@ -9,8 +9,8 @@
           "name": "minecraft:brewing_stand",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{upgradeId:{b0:1b,b2:1b}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{upgrade_id:{b0:1b,b2:1b}}"
             },
             {
               "function": "minecraft:set_name",
@@ -31,7 +31,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 0
+                    "spawner_level": 0
                   }
                 }
               ]
@@ -55,7 +55,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 1
+                    "spawner_level": 1
                   }
                 }
               ]
@@ -79,7 +79,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 2
+                    "spawner_level": 2
                   }
                 }
               ]
@@ -103,13 +103,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 3
+                    "spawner_level": 3
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -149,13 +150,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 0
+                    "spawner_level": 0
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -195,13 +197,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 1
+                    "spawner_level": 1
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -241,13 +244,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 2
+                    "spawner_level": 2
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -264,13 +268,14 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": 3
+                    "spawner_level": 3
                   }
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -335,11 +340,12 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
                   {
-                    "text": "▶ ",
+                    "text": "\u25b6 ",
                     "color": "yellow",
                     "italic": false
                   },
@@ -354,7 +360,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "spawnerLevel": {
+                    "spawner_level": {
                       "max": 2
                     }
                   }

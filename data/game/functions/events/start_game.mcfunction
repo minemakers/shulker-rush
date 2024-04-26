@@ -10,11 +10,11 @@ tag @a remove bit4
 tag @a remove bit5
 tag @a remove bit6
 
-scoreboard players reset * playerId
-scoreboard players set @a killCount 0
-scoreboard players set @a deathCount 0
-scoreboard players set @a armorLevel 0
-scoreboard players set @a swordLevel 0
+scoreboard players reset * player_id
+scoreboard players set @a kill_count 0
+scoreboard players set @a death_count 0
+scoreboard players set @a armor_level 0
+scoreboard players set @a sword_level 0
 
 execute as @a[limit=1,sort=arbitrary] run function #game:resources/scenes/game
 execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red] run spawnpoint @a[team=red] ~ ~ ~
@@ -25,7 +25,7 @@ execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=yellow] run sp
 data merge block 0 0 0 {Items:[]}
 data remove storage game:core chests
 data remove storage game:core players
-loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:air{contents:1b}
+loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:anvil[custom_data={drop_contents:1b}]
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/init
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/respawn
 

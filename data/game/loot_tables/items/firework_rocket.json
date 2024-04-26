@@ -9,20 +9,22 @@
           "name": "minecraft:firework_rocket",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanDestroy:[\"#game:useable\"],HideFlags:10,drop:1b}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
             },
             {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
-                {
-                  "attribute": "minecraft:generic.luck",
-                  "name": "unstackable",
-                  "amount": 0,
-                  "operation": "addition",
-                  "slot": "head"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:max_stack_size": 1,
+                "minecraft:can_break": {
+                  "predicates": [
+                    {
+                      "blocks": "#game:useable"
+                    }
+                  ],
+                  "show_in_tooltip": false
                 }
-              ]
+              }
             }
           ]
         }

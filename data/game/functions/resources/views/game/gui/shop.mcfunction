@@ -26,8 +26,8 @@ loot replace block ~ ~ ~ container.24 loot game:contents/shops/shulker_picker
 loot replace block ~ ~ ~ container.25 loot game:contents/shops/scaffolding
 loot replace block ~ ~ ~ container.26 loot game:contents/shops/ancient_debris
 
-item replace block ~ ~ ~ container.5 with minecraft:black_stained_glass_pane{display:{Name:'""'},shopId:{}}
-item replace block ~ ~ ~ container.14 with minecraft:black_stained_glass_pane{display:{Name:'""'},shopId:{}}
-item replace block ~ ~ ~ container.23 with minecraft:black_stained_glass_pane{display:{Name:'""'},shopId:{}}
+item replace block ~ ~ ~ container.5 with minecraft:black_stained_glass_pane[custom_name='""',custom_data={shop_id:{}}]
+item replace block ~ ~ ~ container.14 with minecraft:black_stained_glass_pane[custom_name='""',custom_data={shop_id:{}}]
+item replace block ~ ~ ~ container.23 with minecraft:black_stained_glass_pane[custom_name='""',custom_data={shop_id:{}}]
 
 data modify entity @s[type=minecraft:marker] data.Items set from block ~ ~ ~ Items

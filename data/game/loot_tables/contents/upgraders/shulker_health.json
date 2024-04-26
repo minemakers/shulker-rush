@@ -9,8 +9,8 @@
           "name": "minecraft:emerald",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{upgradeId:{b0:1b}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{upgrade_id:{b0:1b}}"
             },
             {
               "function": "minecraft:set_name",
@@ -26,6 +26,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -87,7 +88,7 @@
                 ],
                 [
                   {
-                    "text": "▶ ",
+                    "text": "\u25b6 ",
                     "color": "yellow",
                     "italic": false
                   },

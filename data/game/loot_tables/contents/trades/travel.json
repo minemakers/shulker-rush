@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:items/crystal"
+          "value": "game:items/crystal"
         }
       ]
     },
@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:contents/fast_travel"
+          "value": "game:contents/fast_travel"
         }
       ]
     }

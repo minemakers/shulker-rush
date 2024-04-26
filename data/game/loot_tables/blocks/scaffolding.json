@@ -9,8 +9,29 @@
           "name": "minecraft:scaffolding",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanPlaceOn:[\"#game:all\"],CanDestroy:[\"#game:useable\"],HideFlags:24,drop:1b}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:can_break": {
+                  "predicates": [
+                    {
+                      "blocks": "#game:useable"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:can_place_on": {
+                  "predicates": [
+                    {
+                      "blocks": "#game:all"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
             },
             {
               "function": "minecraft:set_count",

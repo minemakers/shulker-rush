@@ -6,13 +6,13 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "game:blocks/end_stone",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 1
             }
-          ]
+          ],
+          "value": "game:blocks/end_stone"
         }
       ],
       "conditions": [

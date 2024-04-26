@@ -13,4 +13,4 @@ execute if entity @s[team=blue] unless entity @e[type=minecraft:shulker,team=blu
 execute if entity @s[team=green] unless entity @e[type=minecraft:shulker,team=green] run function game:managers/players/eliminate
 execute if entity @s[team=yellow] unless entity @e[type=minecraft:shulker,team=yellow] run function game:managers/players/eliminate
 
-scoreboard players operation @s[team=!players] respawnTimer = $timer.respawn config
+scoreboard players operation @s[team=!players] respawn_timer = $timer.respawn config
