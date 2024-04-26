@@ -76,8 +76,7 @@ gamerule mobGriefing false
 gamerule naturalRegeneration true
 gamerule randomTickSpeed 0
 gamerule reducedDebugInfo true
-# TODO: CHANGE TO FALSE
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
