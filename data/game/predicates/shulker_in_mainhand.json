@@ -4,9 +4,7 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "items": [
-          "#game:shulkers"
-        ]
+        "items": "#game:shulkers"
       }
     }
   }
