@@ -13,10 +13,7 @@ on:
         description: "Remove extra files on server"
         default: true
 jobs:
-  check:
-    uses: ./.github/workflows/check.yml
   deploy:
-    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
