@@ -6,12 +6,12 @@ Shulker Rush is a survival map where you have to kill the opposing team's shulke
 
 ## Configuration
 
-Language files can be found inside the ```functions/resources/lang``` folder:
-- English ([en.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/functions/resources/lang/en.mcfunction))
-- French ([fr.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/functions/resources/lang/fr.mcfunction))
-- Russian ([ru.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/functions/resources/lang/ru.mcfunction))
+Language files can be found inside the ```function/resources/lang``` folder:
+- English ([en.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/function/resources/lang/en.mcfunction))
+- French ([fr.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/function/resources/lang/fr.mcfunction))
+- Russian ([ru.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/function/resources/lang/ru.mcfunction))
 
-The [config.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/functions/resources/config.mcfunction) file located inside the ```functions/resources``` folder let you edit:
+The [config.mcfunction](https://github.com/minemakers/shulker-rush/blob/master/data/game/function/resources/config.mcfunction) file located inside the ```function/resources``` folder let you edit:
 
 - The generators speed
 - The respawn speed
