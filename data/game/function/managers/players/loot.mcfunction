@@ -19,4 +19,4 @@ execute if data storage game:core tmp[{Slot:35b}] run item replace block 0 0 0 c
 execute if data storage game:core tmp[{Slot:-106b}] run item replace block 0 0 0 container.26 from entity @s weapon.offhand
 loot spawn ~ ~ ~ mine 0 0 0 minecraft:anvil[custom_data={drop_contents:1b}]
 
-clear @s #game:all[custom_data={drop:1b}]
+clear @s #game:all[custom_data~{drop:1b}]
