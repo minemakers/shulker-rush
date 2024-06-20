@@ -25,9 +25,8 @@
                 "minecraft:attribute_modifiers": {
                   "modifiers": [
                     {
+                      "id": "game:armor",
                       "type": "minecraft:generic.armor",
-                      "name": "minecraft:generic.armor",
-                      "uuid": [-477572823,-78954035,-1099729080,605911192],
                       "amount": 15,
                       "operation": "add_value",
                       "slot": "feet"
