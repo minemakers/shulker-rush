@@ -17,15 +17,14 @@ scoreboard players set @a armor_level 0
 scoreboard players set @a sword_level 0
 
 execute as @a[limit=1,sort=arbitrary] run function #game:resources/scenes/game
-execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=red] run spawnpoint @a[team=red] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=blue] run spawnpoint @a[team=blue] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=green] run spawnpoint @a[team=green] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=spawnpoint,tag=yellow] run spawnpoint @a[team=yellow] ~ ~ ~
+execute at @e[type=minecraft:block_display,tag=spawnpoint,tag=red] run spawnpoint @a[team=red] ~ ~ ~
+execute at @e[type=minecraft:block_display,tag=spawnpoint,tag=blue] run spawnpoint @a[team=blue] ~ ~ ~
+execute at @e[type=minecraft:block_display,tag=spawnpoint,tag=green] run spawnpoint @a[team=green] ~ ~ ~
+execute at @e[type=minecraft:block_display,tag=spawnpoint,tag=yellow] run spawnpoint @a[team=yellow] ~ ~ ~
 
-data merge block 0 0 0 {Items:[]}
 data remove storage game:core chests
 data remove storage game:core players
-loot replace entity @a enderchest.0 26 mine 0 0 0 minecraft:anvil[custom_data={drop_contents:1b}]
+loot replace entity @a enderchest.0 26 loot {}
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/init
 execute as @a[team=!players,gamemode=!spectator] run function game:managers/players/respawn
 

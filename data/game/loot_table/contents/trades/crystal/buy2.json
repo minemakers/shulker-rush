@@ -6,20 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "game:items/crystal"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:loot_table",
           "value": "game:items/gold",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 8
+              "count": 6
             }
           ]
         }

@@ -33,10 +33,10 @@ execute if entity @a[team=blue,limit=1] positioned 2994.5 231 -60.5 run function
 execute if entity @a[team=green,limit=1] positioned 3062.5 231 11.5 run function game:resources/prefabs/spawners/variants/green
 execute if entity @a[team=yellow,limit=1] positioned 2990.5 231 79.5 run function game:resources/prefabs/spawners/variants/yellow
 
-execute if entity @a[team=red,limit=1] run summon minecraft:area_effect_cloud 2900 236 15 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","red"],Rotation:[270.0f,10.0f]}
-execute if entity @a[team=blue,limit=1] run summon minecraft:area_effect_cloud 2986 236 -83 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","blue"],Rotation:[0.0f,10.0f]}
-execute if entity @a[team=green,limit=1] run summon minecraft:area_effect_cloud 3084.5 236 3.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","green"],Rotation:[90.0f,10.0f]}
-execute if entity @a[team=yellow,limit=1] run summon minecraft:area_effect_cloud 2998.5 236 101.5 {Duration:-1,WaitTime:-2147483648,Tags:["spawnpoint","yellow"],Rotation:[180.0f,10.0f]}
+execute if entity @a[team=red,limit=1] run summon minecraft:block_display 2900 236 15 {Tags:["spawnpoint","red"],Rotation:[270.0f,10.0f]}
+execute if entity @a[team=blue,limit=1] run summon minecraft:block_display 2986 236 -83 {Tags:["spawnpoint","blue"],Rotation:[0.0f,10.0f]}
+execute if entity @a[team=green,limit=1] run summon minecraft:block_display 3084.5 236 3.5 {Tags:["spawnpoint","green"],Rotation:[90.0f,10.0f]}
+execute if entity @a[team=yellow,limit=1] run summon minecraft:block_display 2998.5 236 101.5 {Tags:["spawnpoint","yellow"],Rotation:[180.0f,10.0f]}
 
 # Spawn protection
 fill 2985 234 -84 2987 235 -79 minecraft:moving_piston replace minecraft:air

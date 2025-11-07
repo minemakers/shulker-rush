@@ -5,7 +5,6 @@ execute store result score #crystal var if items entity @s container.* minecraft
 function game:managers/shops/dispatch
 execute if score #error var matches 1.. run function game:managers/shops/purchase/errors
 
-data modify storage game:core tmp[0].Slot set value 0b
-data modify block 0 0 0 Items set from storage game:core tmp
-item replace entity @s player.cursor from block 0 0 0 container.0
-data remove storage game:core tmp[0]
+item replace block 0 2 0 contents with minecraft:air
+data modify block 0 2 0 item set from storage game:core _[0]
+item replace entity @s player.cursor from block 0 2 0 contents

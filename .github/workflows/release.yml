@@ -1,0 +1,43 @@
+name: Build and Release World
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g., v1.0.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+      - name: Run beet build
+        run: uvx beet build
+      - name: Create datapack archive
+        run: |
+          mkdir -p world/datapacks
+          cd build/shulker-rush
+          zip -r9 ../../world/datapacks/shulker-rush.zip ./*
+          cd ../..
+      - name: Create world archive
+        run: |
+          mv world "Shulker Rush II"
+          zip -r9 shulker-rush.zip "Shulker Rush II"
+          rm -f "Shulker Rush II/datapacks/shulker-rush.zip"
+          cp -r build/shulker-rush "Shulker Rush II/datapacks/shulker-rush"
+          zip -r9 shulker-rush-realms.zip "Shulker Rush II"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag }}
+          name: Shulker Rush II - ${{ github.event.inputs.tag }}
+          files: |
+            shulker-rush.zip
+            shulker-rush-realms.zip

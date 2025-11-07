@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "game:contents/fast_travel"
+        }
+      ]
+    }
+  ]
+}

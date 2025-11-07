@@ -1,3 +1,29 @@
 data modify storage game:core chests.blue set from entity @s EnderItems
 data modify block 0 0 0 Items set from storage game:core chests.blue
-loot replace entity @a[team=blue] enderchest.0 27 mine 0 0 0 minecraft:anvil[custom_data={drop_contents:1b}]
+item replace entity @a[team=blue] enderchest.0 from block 0 0 0 container.0
+item replace entity @a[team=blue] enderchest.1 from block 0 0 0 container.1
+item replace entity @a[team=blue] enderchest.2 from block 0 0 0 container.2
+item replace entity @a[team=blue] enderchest.3 from block 0 0 0 container.3
+item replace entity @a[team=blue] enderchest.4 from block 0 0 0 container.4
+item replace entity @a[team=blue] enderchest.5 from block 0 0 0 container.5
+item replace entity @a[team=blue] enderchest.6 from block 0 0 0 container.6
+item replace entity @a[team=blue] enderchest.7 from block 0 0 0 container.7
+item replace entity @a[team=blue] enderchest.8 from block 0 0 0 container.8
+item replace entity @a[team=blue] enderchest.9 from block 0 0 0 container.9
+item replace entity @a[team=blue] enderchest.10 from block 0 0 0 container.10
+item replace entity @a[team=blue] enderchest.11 from block 0 0 0 container.11
+item replace entity @a[team=blue] enderchest.12 from block 0 0 0 container.12
+item replace entity @a[team=blue] enderchest.13 from block 0 0 0 container.13
+item replace entity @a[team=blue] enderchest.14 from block 0 0 0 container.14
+item replace entity @a[team=blue] enderchest.15 from block 0 0 0 container.15
+item replace entity @a[team=blue] enderchest.16 from block 0 0 0 container.16
+item replace entity @a[team=blue] enderchest.17 from block 0 0 0 container.17
+item replace entity @a[team=blue] enderchest.18 from block 0 0 0 container.18
+item replace entity @a[team=blue] enderchest.19 from block 0 0 0 container.19
+item replace entity @a[team=blue] enderchest.20 from block 0 0 0 container.20
+item replace entity @a[team=blue] enderchest.21 from block 0 0 0 container.21
+item replace entity @a[team=blue] enderchest.22 from block 0 0 0 container.22
+item replace entity @a[team=blue] enderchest.23 from block 0 0 0 container.23
+item replace entity @a[team=blue] enderchest.24 from block 0 0 0 container.24
+item replace entity @a[team=blue] enderchest.25 from block 0 0 0 container.25
+item replace entity @a[team=blue] enderchest.26 from block 0 0 0 container.26

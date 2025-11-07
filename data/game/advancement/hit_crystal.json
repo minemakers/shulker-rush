@@ -7,7 +7,7 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:projectile",
+                "id": "minecraft:is_projectile",
                 "expected": false
               }
             ]

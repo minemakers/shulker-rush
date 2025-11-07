@@ -16,12 +16,12 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:can_break": {
-                  "predicates": [
-                    {
-                      "blocks": "#game:useable"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                  "blocks": "#game:useable"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_break"
+                  ]
                 }
               }
             },

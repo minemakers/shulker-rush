@@ -1,0 +1,7 @@
+data_pack:
+  load: "."
+  name: shulker-rush
+  min_format: 88
+  max_format: 88
+
+output: build

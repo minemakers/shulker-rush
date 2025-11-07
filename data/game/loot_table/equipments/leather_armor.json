@@ -17,36 +17,32 @@
               "components": {
                 "!minecraft:damage": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:binding_curse": 1
-                  },
-                  "show_in_tooltip": false
+                  "minecraft:binding_curse": 1
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "id": "game:armor",
-                      "type": "minecraft:generic.armor",
-                      "amount": 5,
-                      "operation": "add_value",
-                      "slot": "feet"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                },
-                "minecraft:dyed_color": {
-                  "rgb": 0,
-                  "show_in_tooltip": false
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "game:armor",
+                    "type": "minecraft:armor",
+                    "amount": 5,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:dyed_color": 0,
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers",
+                    "minecraft:dyed_color",
+                    "minecraft:enchantments"
+                  ]
                 }
               }
             },
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_name": "{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"red\"}",
-                "minecraft:dyed_color": {
-                  "rgb": 11546150
-                }
+                "minecraft:custom_name": {"translate":"item.minecraft.leather_boots","italic":false,"color":"red"},
+                "minecraft:dyed_color": 11546150
               },
               "conditions": [
                 {
@@ -61,10 +57,8 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_name": "{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"dark_aqua\"}",
-                "minecraft:dyed_color": {
-                  "rgb": 1481884
-                }
+                "minecraft:custom_name": {"translate":"item.minecraft.leather_boots","italic":false,"color":"dark_aqua"},
+                "minecraft:dyed_color": 1481884
               },
               "conditions": [
                 {
@@ -79,10 +73,8 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_name": "{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"green\"}",
-                "minecraft:dyed_color": {
-                  "rgb": 8439583
-                }
+                "minecraft:custom_name": {"translate":"item.minecraft.leather_boots","italic":false,"color":"green"},
+                "minecraft:dyed_color": 8439583
               },
               "conditions": [
                 {
@@ -97,10 +89,8 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_name": "{\"translate\":\"item.minecraft.leather_boots\",\"italic\":false,\"color\":\"yellow\"}",
-                "minecraft:dyed_color": {
-                  "rgb": 16701501
-                }
+                "minecraft:custom_name": {"translate":"item.minecraft.leather_boots","italic":false,"color":"yellow"},
+                "minecraft:dyed_color": 16701501
               },
               "conditions": [
                 {

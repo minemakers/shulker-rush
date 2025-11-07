@@ -17,22 +17,22 @@
               "components": {
                 "!minecraft:damage": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:binding_curse": 1
-                  },
-                  "show_in_tooltip": false
+                  "minecraft:binding_curse": 1
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "id": "game:armor",
-                      "type": "minecraft:generic.armor",
-                      "amount": 10,
-                      "operation": "add_value",
-                      "slot": "feet"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "game:armor",
+                    "type": "minecraft:armor",
+                    "amount": 10,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers",
+                    "minecraft:enchantments"
+                  ]
                 }
               }
             },

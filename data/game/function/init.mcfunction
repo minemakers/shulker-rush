@@ -52,6 +52,7 @@ scoreboard players set #-1 const -1
 scoreboard players set #20 const 20
 scoreboard players set #100 const 100
 
+gamerule allowEnteringNetherUsingPortals false
 gamerule announceAdvancements false
 gamerule commandBlockOutput false
 gamerule disableRaids true
@@ -69,6 +70,7 @@ gamerule doVinesSpread false
 gamerule doWardenSpawning false
 gamerule doWeatherCycle false
 gamerule keepInventory true
+gamerule locatorBar false
 gamerule logAdminCommands false
 gamerule maxCommandChainLength 65536
 gamerule maxCommandForkCount 65536
@@ -84,5 +86,7 @@ gamerule spectatorsGenerateChunks false
 execute if score $status var matches 2 run gamerule fallDamage true
 execute unless score $status var matches 2 run gamerule fallDamage false
 
+forceload add 0 0
+setblock 0 0 0 minecraft:yellow_shulker_box
 setblock 0 1 0 minecraft:oak_sign
-setblock 0 0 0 minecraft:white_shulker_box
+setblock 0 2 0 minecraft:decorated_pot

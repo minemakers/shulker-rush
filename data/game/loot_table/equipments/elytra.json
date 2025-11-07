@@ -17,10 +17,12 @@
               "components": {
                 "!minecraft:damage": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:binding_curse": 1
-                  },
-                  "show_in_tooltip": false
+                  "minecraft:binding_curse": 1
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:enchantments"
+                  ]
                 }
               }
             },
