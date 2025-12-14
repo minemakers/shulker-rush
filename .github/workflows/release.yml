@@ -19,7 +19,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
       - name: Run beet build
-        run: uvx beet build
+        run: uvx --pre beet
       - name: Create datapack archive
         run: |
           mkdir -p world/datapacks

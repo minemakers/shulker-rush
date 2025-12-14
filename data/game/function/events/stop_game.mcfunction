@@ -1,6 +1,6 @@
 scoreboard players reset @s confirm
 scoreboard players set $status var 0
-gamerule fallDamage false
+gamerule fall_damage false
 
 clear @a
 team join players @a

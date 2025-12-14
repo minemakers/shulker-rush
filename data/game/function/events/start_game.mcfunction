@@ -1,5 +1,5 @@
 scoreboard players set $status var 2
-gamerule fallDamage true
+gamerule fall_damage true
 
 clear @a
 tag @a remove bit0

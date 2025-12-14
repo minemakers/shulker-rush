@@ -52,39 +52,40 @@ scoreboard players set #-1 const -1
 scoreboard players set #20 const 20
 scoreboard players set #100 const 100
 
-gamerule allowEnteringNetherUsingPortals false
-gamerule announceAdvancements false
-gamerule commandBlockOutput false
-gamerule disableRaids true
-gamerule doDaylightCycle false
-gamerule doEntityDrops false
-gamerule doFireTick false
-gamerule doImmediateRespawn true
-gamerule doInsomnia false
-gamerule doLimitedCrafting true
-gamerule doMobSpawning false
-gamerule doPatrolSpawning false
-gamerule doTileDrops true
-gamerule doTraderSpawning false
-gamerule doVinesSpread false
-gamerule doWardenSpawning false
-gamerule doWeatherCycle false
-gamerule keepInventory true
-gamerule locatorBar false
-gamerule logAdminCommands false
-gamerule maxCommandChainLength 65536
-gamerule maxCommandForkCount 65536
-gamerule mobGriefing false
-gamerule naturalRegeneration true
-gamerule randomTickSpeed 0
-gamerule reducedDebugInfo true
-gamerule sendCommandFeedback false
-gamerule showDeathMessages false
-gamerule spawnRadius 0
-gamerule spectatorsGenerateChunks false
+gamerule advance_time false
+gamerule advance_weather false
+gamerule allow_entering_nether_using_portals false
+gamerule block_drops true
+gamerule command_block_output false
+gamerule entity_drops false
+gamerule fire_spread_radius_around_player 0
+gamerule immediate_respawn true
+gamerule keep_inventory true
+gamerule limited_crafting true
+gamerule locator_bar false
+gamerule log_admin_commands false
+gamerule max_command_forks 65536
+gamerule max_command_sequence_length 65536
+gamerule mob_griefing false
+gamerule natural_health_regeneration true
+gamerule raids false
+gamerule random_tick_speed 0
+gamerule reduced_debug_info true
+gamerule respawn_radius 0
+gamerule send_command_feedback false
+gamerule show_advancement_messages false
+gamerule show_death_messages false
+gamerule spawn_mobs false
+gamerule spawn_monsters false
+gamerule spawn_patrols false
+gamerule spawn_phantoms false
+gamerule spawn_wandering_traders false
+gamerule spawn_wardens false
+gamerule spectators_generate_chunks false
+gamerule spread_vines false
 
-execute if score $status var matches 2 run gamerule fallDamage true
-execute unless score $status var matches 2 run gamerule fallDamage false
+execute if score $status var matches 2 run gamerule fall_damage true
+execute unless score $status var matches 2 run gamerule fall_damage false
 
 forceload add 0 0
 setblock 0 0 0 minecraft:yellow_shulker_box
