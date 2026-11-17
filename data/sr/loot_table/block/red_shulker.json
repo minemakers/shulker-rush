@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_shulker_box",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:can_break": {
+                  "blocks": "#sr:useable"
+                },
+                "minecraft:can_place_on": {},
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_break",
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "red_shulker",
+                  "storage": "sr:lang",
+                  "color": "red",
+                  "bold": true,
+                  "italic": false,
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

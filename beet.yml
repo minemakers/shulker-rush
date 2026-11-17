@@ -1,7 +1,15 @@
 data_pack:
   load: "."
   name: shulker-rush
-  min_format: 94
-  max_format: 94
+
+require:
+  - beet_pack
+
+meta:
+  forceload:
+    - "4976 -32 5024 32"
+    - "944 -16 1072 64"
+    - "1996 -72 2080 72"
+    - "2896 -88 3088 104"
 
 output: build

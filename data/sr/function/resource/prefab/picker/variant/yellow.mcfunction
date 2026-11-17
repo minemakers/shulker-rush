@@ -1,0 +1,1 @@
+function sr:resource/prefab/picker/abstract {name:"yellow",color:"yellow",armor:15066419,head:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZkZDdiYmNlYWMxMzQ2NDE4Njg0YjFmYTgzMzc3ZDU3OTZjZjMxNTRkYjI5OWYyZDk5OTFiOTZlM2MzZDk5In19fQ==",tags:["sr.team","sr.yellow"]}

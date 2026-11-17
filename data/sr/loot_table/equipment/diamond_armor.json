@@ -1,0 +1,88 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_boots",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "!minecraft:damage": {},
+                "minecraft:enchantments": {
+                  "minecraft:binding_curse": 1
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "sr:armor",
+                    "type": "minecraft:armor",
+                    "amount": 20,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers",
+                    "minecraft:enchantments"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:0b}",
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$bound.armors"
+                  },
+                  "score": "sr.config"
+                },
+                "test": 1
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "replace_all",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "bound",
+                    "storage": "sr:lang",
+                    "color": "gray",
+                    "italic": false,
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$bound.armors"
+                  },
+                  "score": "sr.config"
+                },
+                "test": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

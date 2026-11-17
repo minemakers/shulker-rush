@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:can_break": {
+                  "blocks": "#sr:useable"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_break"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "gold",
+                  "storage": "sr:lang",
+                  "color": "gold",
+                  "bold": true,
+                  "italic": false,
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+reset_player: true
+zip_datapacks: false
+clean_chunks: true
+accepted_entries:
+  - data/**/*.dat
+  - dimensions/minecraft/overworld/data/**/*.dat
+  - dimensions/minecraft/overworld/region/*.mca
+  - dimensions/minecraft/overworld/entities/*.mca
+  - icon.png
+  - level.dat

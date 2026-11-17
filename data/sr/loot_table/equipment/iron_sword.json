@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:1b,sword:1b,sword_level:0}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "!minecraft:damage": {},
+                "minecraft:can_break": {
+                  "blocks": "#sr:useable"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_break"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:0b}",
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$bound.iron_sword"
+                  },
+                  "score": "sr.config"
+                },
+                "test": 1
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "replace_all",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "bound",
+                    "storage": "sr:lang",
+                    "color": "gray",
+                    "italic": false,
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$bound.iron_sword"
+                  },
+                  "score": "sr.config"
+                },
+                "test": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

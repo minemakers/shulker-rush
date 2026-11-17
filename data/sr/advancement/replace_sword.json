@@ -1,0 +1,103 @@
+{
+  "criteria": {
+    "sword0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.sword_level": 0
+            }
+          }
+        },
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{sword_level:0}"
+            }
+          }
+        ]
+      }
+    },
+    "sword1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.sword_level": 1
+            }
+          }
+        },
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{sword_level:1}"
+            }
+          }
+        ]
+      }
+    },
+    "sword2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.sword_level": 2
+            }
+          }
+        },
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{sword_level:2}"
+            }
+          }
+        ]
+      }
+    },
+    "sword3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.sword_level": 3
+            }
+          }
+        },
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{sword_level:3}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sword0",
+      "sword1",
+      "sword2",
+      "sword3"
+    ]
+  ],
+  "rewards": {
+    "function": "sr:event/replace_sword"
+  }
+}

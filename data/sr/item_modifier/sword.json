@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:sharpness": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "sr.sword_level"
+        }
+      }
+    },
+    {
+      "type": "minecraft:copy_custom_data",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "sr:core"
+      },
+      "ops": [
+        {
+          "source": "sword_level",
+          "target": "sword_level",
+          "op": "replace"
+        }
+      ]
+    }
+  ]
+}

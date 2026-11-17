@@ -1,0 +1,1 @@
+function sr:resource/prefab/picker/abstract {name:"blue",color:"dark_aqua",armor:5006011,head:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk4Nzc1YWM2Yzk3M2U2MTQyNTg0NDJkNmRjZThiNTJjNGQ5ZGJmNjQ4MzY5ZTY1ZDUyM2NhZmI0MzJiOTk1In19fQ==",tags:["sr.team","sr.blue"]}

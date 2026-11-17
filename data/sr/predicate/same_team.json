@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:int_value_check",
+      "value": "sr:team",
+      "test": {
+        "min": 1
+      }
+    },
+    {
+      "type": "minecraft:int_value_check",
+      "value": "sr:team",
+      "test": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#team"
+        },
+        "score": "sr.var"
+      }
+    }
+  ]
+}

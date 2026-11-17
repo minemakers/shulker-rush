@@ -1,0 +1,110 @@
+{
+  "type": "minecraft:number_dispatcher",
+  "cases": [
+    {
+      "condition": {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:team": "sr.red"
+            }
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.red"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "value": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:team": "sr.blue"
+            }
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.blue"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "value": 2
+    },
+    {
+      "condition": {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:team": "sr.green"
+            }
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.green"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "value": 3
+    },
+    {
+      "condition": {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:team": "sr.yellow"
+            }
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.yellow"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "value": 4
+    }
+  ],
+  "default": 0
+}

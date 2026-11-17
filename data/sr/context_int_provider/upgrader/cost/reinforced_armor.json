@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:number_dispatcher",
+  "cases": [
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.armor_level": 0
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.reinforced_armor.1"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.armor_level": 1
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.reinforced_armor.2"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.armor_level": 2
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.reinforced_armor.3"
+        },
+        "score": "sr.config"
+      }
+    }
+  ],
+  "default": -1
+}

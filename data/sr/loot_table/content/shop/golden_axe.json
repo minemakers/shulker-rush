@@ -1,0 +1,200 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:equipment/golden_axe",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{shop_id:{id:\"golden_axe\",handler:\"give\",loot:\"sr:equipment/golden_axe\"}}"
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "item.minecraft.golden_axe",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.golden_axe.iron",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.golden_axe.iron"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.golden_axe.gold",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.golden_axe.gold"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "light_purple",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.golden_axe.crystal",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "crystal",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.golden_axe.crystal"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "\u25b6 ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "shop.help",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

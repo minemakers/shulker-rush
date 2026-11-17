@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:filtered",
+  "slot_source": {
+    "type": "minecraft:group",
+    "terms": [
+      {
+        "type": "minecraft:slot_range",
+        "slots": "hotbar.*"
+      },
+      {
+        "type": "minecraft:slot_range",
+        "slots": "weapon.offhand"
+      },
+      {
+        "type": "minecraft:slot_range",
+        "slots": "player.cursor"
+      }
+    ]
+  },
+  "item_filter": {
+    "predicates": {
+      "minecraft:custom_data": "{drop:1b}"
+    }
+  }
+}

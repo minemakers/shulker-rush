@@ -1,0 +1,67 @@
+{
+  "criteria": {
+    "red": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:shulker",
+            "minecraft:team": "sr.red"
+          }
+        }
+      }
+    },
+    "blue": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:shulker",
+            "minecraft:team": "sr.blue"
+          }
+        }
+      }
+    },
+    "green": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:shulker",
+            "minecraft:team": "sr.green"
+          }
+        }
+      }
+    },
+    "yellow": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:shulker",
+            "minecraft:team": "sr.yellow"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "red",
+      "blue",
+      "green",
+      "yellow"
+    ]
+  ],
+  "rewards": {
+    "function": "sr:event/hurt_shulker"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:block/red_shulker",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:type_specific/player": {
+                "looking_at": {
+                  "minecraft:entity_type": "minecraft:shulker",
+                  "minecraft:team": "sr.red"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:block/blue_shulker",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:type_specific/player": {
+                "looking_at": {
+                  "minecraft:entity_type": "minecraft:shulker",
+                  "minecraft:team": "sr.blue"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:block/green_shulker",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:type_specific/player": {
+                "looking_at": {
+                  "minecraft:entity_type": "minecraft:shulker",
+                  "minecraft:team": "sr.green"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:block/yellow_shulker",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:type_specific/player": {
+                "looking_at": {
+                  "minecraft:entity_type": "minecraft:shulker",
+                  "minecraft:team": "sr.yellow"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_helmet",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:0b}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "!minecraft:damage": {},
+                "minecraft:enchantments": {
+                  "minecraft:binding_curse": 1,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "sr:armor",
+                    "type": "minecraft:armor",
+                    "amount": 0,
+                    "operation": "add_value",
+                    "slot": "head"
+                  }
+                ],
+                "minecraft:dyed_color": 0,
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers",
+                    "minecraft:dyed_color",
+                    "minecraft:enchantments"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "translate": "item.minecraft.leather_helmet",
+                  "italic": false,
+                  "color": "red"
+                },
+                "minecraft:dyed_color": 11546150
+              },
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.red"
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "translate": "item.minecraft.leather_helmet",
+                  "italic": false,
+                  "color": "dark_aqua"
+                },
+                "minecraft:dyed_color": 1481884
+              },
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.blue"
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "translate": "item.minecraft.leather_helmet",
+                  "italic": false,
+                  "color": "green"
+                },
+                "minecraft:dyed_color": 8439583
+              },
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.green"
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "translate": "item.minecraft.leather_helmet",
+                  "italic": false,
+                  "color": "yellow"
+                },
+                "minecraft:dyed_color": 16701501
+              },
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.yellow"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:all_of",
+  "definitions": [
+    {
+      "type": "minecraft:function",
+      "setup": "sr:test/arena2"
+    },
+    {
+      "type": "minecraft:function",
+      "setup": "sr:event/stop_game"
+    },
+    {
+      "type": "minecraft:function",
+      "setup": "sr:event/pick_teams",
+      "teardown": "sr:event/stop_game"
+    }
+  ]
+}

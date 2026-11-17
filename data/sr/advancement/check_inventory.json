@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:impossible"
+    },
+    "changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "sr.player_id": {
+              "min": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

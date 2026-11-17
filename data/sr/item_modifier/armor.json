@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:protection": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "sr.armor_level"
+        }
+      }
+    },
+    {
+      "type": "minecraft:set_lore",
+      "mode": "replace_all",
+      "lore": [
+        [
+          {
+            "translate": "enchantment.minecraft.protection",
+            "color": "gray",
+            "italic": false
+          },
+          {
+            "text": " I"
+          }
+        ]
+      ],
+      "condition": {
+        "type": "minecraft:int_value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "sr.armor_level"
+        },
+        "test": 1
+      }
+    },
+    {
+      "type": "minecraft:set_lore",
+      "mode": "replace_all",
+      "lore": [
+        [
+          {
+            "translate": "enchantment.minecraft.protection",
+            "color": "gray",
+            "italic": false
+          },
+          {
+            "text": " II"
+          }
+        ]
+      ],
+      "condition": {
+        "type": "minecraft:int_value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "sr.armor_level"
+        },
+        "test": 2
+      }
+    },
+    {
+      "type": "minecraft:set_lore",
+      "mode": "replace_all",
+      "lore": [
+        [
+          {
+            "translate": "enchantment.minecraft.protection",
+            "color": "gray",
+            "italic": false
+          },
+          {
+            "text": " III"
+          }
+        ]
+      ],
+      "condition": {
+        "type": "minecraft:int_value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "sr.armor_level"
+        },
+        "test": 3
+      }
+    }
+  ]
+}

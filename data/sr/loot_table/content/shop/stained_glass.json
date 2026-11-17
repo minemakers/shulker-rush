@@ -1,0 +1,277 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sr:block/stained_glass",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{shop_id:{id:\"stained_glass\",handler:\"give\",loot:\"sr:block/stained_glass\"}}"
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "block.minecraft.red_stained_glass",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.red"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "block.minecraft.blue_stained_glass",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.blue"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "block.minecraft.green_stained_glass",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.green"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "block.minecraft.yellow_stained_glass",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.yellow"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.stained_glass.iron",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "iron",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.stained_glass.iron"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.stained_glass.gold",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "gold",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.stained_glass.gold"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "x",
+                    "color": "light_purple",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.stained_glass.crystal",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "crystal",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:int_value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$cost.stained_glass.crystal"
+                  },
+                  "score": "sr.config"
+                },
+                "test": {
+                  "min": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "\u25b6 ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "shop.help",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

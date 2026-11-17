@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "sr.food": {
+              "max": 19
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sr:event/give_saturation"
+  }
+}

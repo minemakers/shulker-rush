@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:scaffolding"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sr:event/place_scaffolding"
+  }
+}

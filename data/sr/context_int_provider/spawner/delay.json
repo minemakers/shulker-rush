@@ -1,0 +1,291 @@
+{
+  "type": "minecraft:number_dispatcher",
+  "cases": [
+    {
+      "condition": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "minecraft:entity_tags": {
+            "all_of": [
+              "sr.crystal"
+            ]
+          }
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.crystal"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.iron"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 0
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.iron.0"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.iron"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 1
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.iron.1"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.iron"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 2
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.iron.2"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.iron"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 3
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.iron.3"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.gold"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 0
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.gold.0"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.gold"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 1
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.gold.1"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.gold"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 2
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.gold.2"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "sr.gold"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 3
+            }
+          }
+        ]
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.gold.3"
+        },
+        "score": "sr.config"
+      }
+    }
+  ],
+  "default": 20
+}

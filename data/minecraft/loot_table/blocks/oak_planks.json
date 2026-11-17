@@ -6,20 +6,16 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ],
-          "value": "game:blocks/oak_planks"
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 1
+          },
+          "value": "sr:block/oak_planks"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

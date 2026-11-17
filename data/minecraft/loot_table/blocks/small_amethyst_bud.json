@@ -6,13 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ],
-          "value": "game:items/crystal"
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 1
+          },
+          "value": "sr:item/crystal"
         }
       ]
     }

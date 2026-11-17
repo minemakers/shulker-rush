@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:sub",
+  "left": {
+    "type": "minecraft:div",
+    "left": {
+      "type": "minecraft:mul",
+      "inputs": [
+        {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "$timer.gold.0"
+          },
+          "score": "sr.config"
+        },
+        100
+      ]
+    },
+    "right": {
+      "type": "minecraft:number_dispatcher",
+      "cases": [
+        {
+          "condition": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 0
+            }
+          },
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "$timer.gold.1"
+            },
+            "score": "sr.config"
+          }
+        },
+        {
+          "condition": {
+            "type": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "sr.spawner_level": 1
+            }
+          },
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "$timer.gold.2"
+            },
+            "score": "sr.config"
+          }
+        }
+      ],
+      "default": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$timer.gold.3"
+        },
+        "score": "sr.config"
+      }
+    }
+  },
+  "right": 100
+}

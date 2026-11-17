@@ -6,20 +6,16 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ],
-          "value": "game:blocks/ancient_debris"
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 1
+          },
+          "value": "sr:block/ancient_debris"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

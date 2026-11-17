@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:all_of",
+  "definitions": [
+    {
+      "type": "minecraft:function",
+      "setup": "sr:test/arena1"
+    },
+    {
+      "type": "minecraft:function",
+      "setup": "sr:event/stop_game",
+      "teardown": "sr:event/stop_game"
+    }
+  ]
+}

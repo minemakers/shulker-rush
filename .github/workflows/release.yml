@@ -1,43 +1,113 @@
-name: Build and Release World
+name: Release
 
 on:
+  push:
+    branches: [master]
+    paths: [.minecraft-version]
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag (e.g., v1.0.0)"
-        required: true
+        description: "Release tag (defaults to the next patch, e.g. v2.3.2 after v2.3.1)"
+        required: false
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: release
 
 jobs:
-  build:
+  version:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+      minecraft: ${{ steps.tag.outputs.minecraft }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
-      - name: Run beet build
-        run: uvx --pre beet
-      - name: Create datapack archive
-        run: |
-          mkdir -p world/datapacks
-          cd build/shulker-rush
-          zip -r9 ../../world/datapacks/shulker-rush.zip ./*
-          cd ../..
-      - name: Create world archive
-        run: |
-          mv world "Shulker Rush II"
-          zip -r9 shulker-rush.zip "Shulker Rush II"
-          rm -f "Shulker Rush II/datapacks/shulker-rush.zip"
-          cp -r build/shulker-rush "Shulker Rush II/datapacks/shulker-rush"
-          zip -r9 shulker-rush-realms.zip "Shulker Rush II"
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: actions/checkout@v7
         with:
-          tag_name: ${{ github.event.inputs.tag }}
-          name: Shulker Rush II - ${{ github.event.inputs.tag }}
-          files: |
-            shulker-rush.zip
-            shulker-rush-realms.zip
+          fetch-depth: 0
+
+      - name: Pick the release tag
+        id: tag
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          echo "minecraft=$(cat .minecraft-version)" >> "$GITHUB_OUTPUT"
+          if [ -n "$RELEASE_TAG" ]; then
+            tag="$RELEASE_TAG"
+          elif [ -n "$INPUT_TAG" ]; then
+            tag="$INPUT_TAG"
+          elif git tag --points-at HEAD --list 'v*' | grep -q .; then
+            echo "This commit is already released."
+            exit 0
+          else
+            latest="$(git tag --list 'v*' --sort=-v:refname | head -n 1)"
+            latest="${latest:-v0.0.0}"
+            IFS=. read -r major minor patch <<< "${latest#v}"
+            tag="v$major.$minor.$((patch + 1))"
+          fi
+          echo "Releasing $tag"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+  test:
+    needs: version
+    if: needs.version.outputs.tag != ''
+    uses: ./.github/workflows/test.yml
+
+  publish:
+    needs: [version, test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ needs.version.outputs.tag }}
+      MINECRAFT: ${{ needs.version.outputs.minecraft }}
+      GH_TOKEN: ${{ github.token }}
+      CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.3.3
+
+      - name: Install just
+        uses: taiki-e/install-action@v2
+        with:
+          tool: just
+
+      - name: Package the world (fails if a test ships with the pack)
+        run: just package
+
+      - name: Write the release notes
+        env:
+          RELEASE_NOTES: ${{ github.event.release.body }}
+        run: |
+          # A release published on GitHub keeps its own notes; a merged update says what it is.
+          if [ "$GITHUB_EVENT_NAME" = "release" ]; then
+            printf '%s\n' "$RELEASE_NOTES" > notes.md
+          elif [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            echo "Update to Minecraft $MINECRAFT." > notes.md
+          else
+            : > notes.md
+          fi
+
+      - name: Attach the world to the published release
+        if: github.event_name == 'release'
+        run: gh release upload "$TAG" release/shulker-rush.zip release/shulker-rush-realms.zip --clobber
+
+      - name: Create the GitHub release
+        if: github.event_name != 'release'
+        run: |
+          gh release create "$TAG" release/shulker-rush.zip release/shulker-rush-realms.zip \
+            --target "$GITHUB_SHA" --title "Shulker Rush II - $TAG" --notes-file notes.md
+
+      - name: Upload the world to CurseForge
+        if: env.CURSEFORGE_TOKEN != ''
+        run: just curseforge "$TAG" --notes notes.md

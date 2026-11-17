@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:number_dispatcher",
+  "cases": [
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.sword_level": 0
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.sharpened_sword.1"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.sword_level": 1
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.sharpened_sword.2"
+        },
+        "score": "sr.config"
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "sr.sword_level": 2
+        }
+      },
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$cost.sharpened_sword.3"
+        },
+        "score": "sr.config"
+      }
+    }
+  ],
+  "default": -1
+}

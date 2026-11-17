@@ -1,0 +1,61 @@
+name: Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.3.3
+
+      - name: Install just
+        uses: taiki-e/install-action@v2
+        with:
+          tool: just
+
+      - name: Read the target Minecraft version
+        id: version
+        run: echo "minecraft=$(cat .minecraft-version)" >> "$GITHUB_OUTPUT"
+
+      - name: Week of the year
+        id: week
+        run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache the Ward test server
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/mcward
+          key: mcward-${{ steps.version.outputs.minecraft }}-${{ steps.week.outputs.week }}
+
+      - name: Run the tests
+        run: just test --reporter github --junit-xml results.xml --coverage
+
+      - name: Summarize the results
+        if: always()
+        run: python3 scripts/report.py results.xml >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Package the world (fails if a test ships with the pack)
+        run: just package
+
+      - name: Upload the playable world
+        uses: actions/upload-artifact@v7
+        with:
+          name: shulker-rush-${{ steps.version.outputs.minecraft }}
+          path: release/*.zip

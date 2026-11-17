@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_eye",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "text": "",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "nbt": "leave_team.name",
+                "storage": "sr:lang",
+                "color": "red",
+                "bold": true,
+                "interpret": true
+              },
+              {
+                "text": " - "
+              },
+              {
+                "nbt": "leave_team.usage",
+                "storage": "sr:lang",
+                "interpret": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

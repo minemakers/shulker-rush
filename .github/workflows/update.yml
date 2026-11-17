@@ -1,0 +1,169 @@
+name: Minecraft update
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Minecraft release to try (defaults to the newest one Ward supports)"
+        required: false
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: minecraft-update
+
+env:
+  MAINTAINER: Aksiome
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      current: ${{ steps.check.outputs.current }}
+      latest: ${{ steps.check.outputs.latest }}
+      pack_format: ${{ steps.check.outputs.pack_format }}
+      propose: ${{ steps.existing.outputs.propose }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Look for a newer Minecraft release
+        id: check
+        env:
+          TARGET_VERSION: ${{ inputs.version }}
+        run: python3 scripts/latest.py
+
+      - name: Skip when this update is already proposed
+        id: existing
+        if: steps.check.outputs.outdated == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: update/minecraft-${{ steps.check.outputs.latest }}
+        run: |
+          # Any pull request, even a closed one, means this version was already proposed.
+          # A branch without a pull request is a leftover from a failed run and gets replaced.
+          if [ "$(gh pr list --head "$BRANCH" --state all --json number --jq length)" != "0" ]; then
+            echo "A pull request for $BRANCH already exists, nothing to do."
+          else
+            echo "propose=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  update:
+    needs: check
+    if: needs.check.outputs.propose == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    env:
+      VERSION: ${{ needs.check.outputs.latest }}
+      PACK_FORMAT: ${{ needs.check.outputs.pack_format }}
+      BRANCH: update/minecraft-${{ needs.check.outputs.latest }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Pin Minecraft ${{ env.VERSION }}
+        run: |
+          git switch -c "$BRANCH"
+          echo "$VERSION" > .minecraft-version
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.3.3
+
+      - name: Install just and mcwpack
+        uses: taiki-e/install-action@v2
+        with:
+          tool: just,mcwpack@0.7.0
+
+      - name: Week of the year
+        id: week
+        run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache the Ward test server
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/mcward
+          key: mcward-${{ env.VERSION }}-${{ steps.week.outputs.week }}
+
+      - name: Run the tests on Minecraft ${{ env.VERSION }}
+        id: tests
+        continue-on-error: true
+        run: just test --reporter github --junit-xml results.xml
+
+      - name: Find the Java version of the Minecraft ${{ env.VERSION }} server
+        id: java
+        run: uv run --no-project scripts/world.py java
+
+      - name: Install Java ${{ steps.java.outputs.java }}
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: ${{ steps.java.outputs.java }}
+
+      - name: Install faketime
+        run: sudo apt-get update -q && sudo apt-get install -y --no-install-recommends faketime
+
+      - name: Upgrade the world save to Minecraft ${{ env.VERSION }}
+        id: world
+        continue-on-error: true
+        run: just world
+
+      - name: Open the pull request
+        env:
+          OUTCOME: ${{ steps.tests.outcome }}
+          WORLD_OUTCOME: ${{ steps.world.outcome }}
+          CURRENT: ${{ needs.check.outputs.current }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .minecraft-version world
+          git commit -m "🐛 fix: update datapack and world to $VERSION"
+          git push --force origin "$BRANCH"
+
+          python3 scripts/report.py results.xml > summary.md
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$OUTCOME" = "success" ]; then
+            title="Update to Minecraft $VERSION"
+            label="minecraft-update"
+            intro="Minecraft $VERSION is out and the whole test suite passes on it. This should be safe to merge."
+            extra=(--reviewer "$MAINTAINER")
+          else
+            title="Update to Minecraft $VERSION (tests failing)"
+            label="needs-fix"
+            intro="@$MAINTAINER Minecraft $VERSION is out and the map does not pass its tests on it yet. Could you take a look and fix it on this branch?"
+            extra=(--assignee "$MAINTAINER")
+          fi
+
+          gh label create "$label" --color "$([ "$label" = needs-fix ] && echo d73a4a || echo 0e8a16)" 2> /dev/null || true
+
+          {
+            echo "$intro"
+            echo
+            echo "- Pack format: \`$PACK_FORMAT\` (was Minecraft $CURRENT)"
+            echo "- Test run: $RUN_URL"
+            if [ "$WORLD_OUTCOME" = "success" ]; then
+              echo "- World save: upgraded with Mojang's server and cleaned with mcwpack. Load it once before merging."
+            else
+              echo "- World save: **could not be upgraded automatically** (see the run). Upgrade it by opening the map in Minecraft $VERSION."
+            fi
+            echo
+            cat summary.md
+            echo
+            echo "To reproduce locally: \`just upgrade $VERSION\`"
+            echo
+            echo "Merging this publishes the next patch release automatically."
+          } > body.md
+
+          gh pr create --base "${{ github.event.repository.default_branch }}" --head "$BRANCH" \
+            --title "$title" --body-file body.md --label "$label" "${extra[@]}"

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:filtered",
+  "slot_source": {
+    "type": "minecraft:group",
+    "terms": [
+      {
+        "type": "minecraft:slot_range",
+        "slots": "container.*"
+      },
+      {
+        "type": "minecraft:slot_range",
+        "slots": "weapon.offhand"
+      }
+    ]
+  },
+  "item_filter": {
+    "predicates": {
+      "minecraft:custom_data": "{sword:1b}"
+    }
+  }
+}

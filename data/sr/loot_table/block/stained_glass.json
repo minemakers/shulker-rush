@@ -1,0 +1,189 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_stained_glass",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "translate": "block.minecraft.red_stained_glass",
+                "italic": false
+              }
+            ]
+          },
+          "condition": {
+            "type": "minecraft:any_of",
+            "terms": [
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.red"
+                }
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.red"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cyan_stained_glass",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "translate": "block.minecraft.blue_stained_glass",
+                "italic": false
+              }
+            ]
+          },
+          "condition": {
+            "type": "minecraft:any_of",
+            "terms": [
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.blue"
+                }
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.blue"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_stained_glass",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "translate": "block.minecraft.green_stained_glass",
+                "italic": false
+              }
+            ]
+          },
+          "condition": {
+            "type": "minecraft:any_of",
+            "terms": [
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.green"
+                }
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.green"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:yellow_stained_glass",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "translate": "block.minecraft.yellow_stained_glass",
+                "italic": false
+              }
+            ]
+          },
+          "condition": {
+            "type": "minecraft:any_of",
+            "terms": [
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:team": "sr.yellow"
+                }
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "sr.yellow"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "modifier": [
+        {
+          "type": "minecraft:set_custom_data",
+          "tag": "{drop:1b}"
+        },
+        {
+          "type": "minecraft:set_components",
+          "components": {
+            "minecraft:can_break": {
+              "blocks": "#sr:useable"
+            },
+            "minecraft:can_place_on": {},
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:can_break",
+                "minecraft:can_place_on"
+              ]
+            }
+          }
+        },
+        {
+          "type": "minecraft:set_count",
+          "count": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "$count.stained_glass"
+            },
+            "score": "sr.config"
+          }
+        }
+      ]
+    }
+  ]
+}

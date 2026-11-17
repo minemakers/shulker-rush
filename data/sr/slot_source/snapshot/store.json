@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:contents",
+  "component": "minecraft:container",
+  "slot_source": {
+    "type": "minecraft:slot_range",
+    "source": "this",
+    "slots": "armor.body"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_stone",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{drop:1b}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:can_break": {
+                  "blocks": "#sr:useable"
+                },
+                "minecraft:can_place_on": {},
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_break",
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$count.end_stone"
+                },
+                "score": "sr.config"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

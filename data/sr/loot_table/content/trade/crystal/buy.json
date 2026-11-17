@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "value": "sr:item/iron",
+          "type": "minecraft:loot_table",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 64
+          }
+        }
+      ]
+    }
+  ]
+}

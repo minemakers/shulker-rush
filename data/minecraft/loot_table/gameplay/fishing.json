@@ -7,17 +7,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 60,
-          "value": "game:items/iron"
+          "value": "sr:item/iron"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "value": "game:items/gold"
+          "value": "sr:item/gold"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 20,
-          "value": "game:items/crystal"
+          "value": "sr:item/crystal"
         }
       ]
     }

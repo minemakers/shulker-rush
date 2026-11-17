@@ -1,0 +1,433 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "modifier": [
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{upgrade_id:{id:\"sharpened_sword\",handler:\"level\",action:\"upgrade_sword\"}}"
+            },
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "sharpened_sword.name",
+                  "storage": "sr:lang",
+                  "color": "green",
+                  "italic": false,
+                  "interpret": true
+                },
+                {
+                  "text": " I"
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 0
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "sharpened_sword.name",
+                  "storage": "sr:lang",
+                  "color": "green",
+                  "italic": false,
+                  "interpret": true
+                },
+                {
+                  "text": " II"
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "sharpened_sword.name",
+                  "storage": "sr:lang",
+                  "color": "green",
+                  "italic": false,
+                  "interpret": true
+                },
+                {
+                  "text": " III"
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 2
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "nbt": "sharpened_sword.name",
+                  "storage": "sr:lang",
+                  "color": "gold",
+                  "italic": false,
+                  "interpret": true
+                },
+                {
+                  "text": " III"
+                }
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 3
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.sharpened_sword.1",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 0
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.sharpened_sword.2",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "cost",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                [
+                  {
+                    "text": "x",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "$cost.sharpened_sword.3",
+                      "objective": "sr.config"
+                    }
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "nbt": "soul",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 2
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "nbt": "maxed",
+                    "storage": "sr:lang",
+                    "color": "dark_gray",
+                    "italic": false,
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 3
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "nbt": "sharpened_sword.help",
+                    "storage": "sr:lang",
+                    "color": "gray",
+                    "italic": false,
+                    "interpret": true
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "+ ",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "enchantment.minecraft.sharpness"
+                  },
+                  {
+                    "text": " I"
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 0
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "+ ",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "enchantment.minecraft.sharpness"
+                  },
+                  {
+                    "text": " II"
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": 1
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "+ ",
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "enchantment.minecraft.sharpness"
+                  },
+                  {
+                    "text": " III"
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": {
+                    "min": 2
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "\u25b6 ",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "upgrader.help",
+                    "storage": "sr:lang",
+                    "interpret": true
+                  }
+                ]
+              ],
+              "condition": {
+                "type": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "sr.sword_level": {
+                    "max": 2
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

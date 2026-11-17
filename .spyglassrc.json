@@ -1,0 +1,15 @@
+{
+  "env": {
+    "exclude": [
+      ".*/**",
+      "build/**",
+      "world/**"
+    ],
+    "mcmetaSummaryOverrides": {
+      "commands": {
+        "path": ".commands.json",
+        "replace": false
+      }
+    }
+  }
+}

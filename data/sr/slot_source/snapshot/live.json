@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:group",
+  "terms": [
+    { "type": "minecraft:slot_range", "source": "this", "slots": "container.*" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "armor.head" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "armor.chest" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "armor.legs" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "armor.feet" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "weapon.offhand" },
+    { "type": "minecraft:slot_range", "source": "this", "slots": "player.cursor" }
+  ]
+}
